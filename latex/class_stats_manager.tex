@@ -1,0 +1,152 @@
+\doxysection{Stats\+Manager Class Reference}
+\hypertarget{class_stats_manager}{}\label{class_stats_manager}\index{StatsManager@{StatsManager}}
+
+
+A class that manages user stats taken from data acquired in the simulation scene.  
+
+
+Inheritance diagram for Stats\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_stats_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_stats_manager_a4499a702e272627a5c293411cba09c43}{Add\+Record}} (string player\+Name, float elapsed\+Time)
+\begin{DoxyCompactList}\small\item\em Stores an instance of stats from a user\textquotesingle{}s session and then calls the Save\+Stats() method to save them. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stats_manager_a8dd8c040a796614a61634a8fb34d2a2b}{set\+Name}} (string n)
+\begin{DoxyCompactList}\small\item\em Sets the name of the user. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_stats_manager_a76062fa34f976f81489644c7e2510655}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name set by the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stats_manager_a9490e7e6049fdbe6a9d006109455f138}{set\+Elapsed\+Time}} (float time)
+\begin{DoxyCompactList}\small\item\em Sets the elapsed time as a float value. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_stats_manager_a3a4f7c6cf05c15c7ed1e55aef000efee}{get\+Elapsed\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Gets the time taken by the user from the simulation scene. \end{DoxyCompactList}\item 
+\Hypertarget{class_stats_manager_a6358dade9e9391d0b20bdaea5b5b9a10}\label{class_stats_manager_a6358dade9e9391d0b20bdaea5b5b9a10} 
+void {\bfseries Save\+Current\+Record} ()
+\begin{DoxyCompactList}\small\item\em The initial method for keeping track of the name and time of the user called when the user inputs their name. \end{DoxyCompactList}\item 
+List$<$ string $>$ \mbox{\hyperlink{class_stats_manager_a262e612f92932f2bd9262b29dc45d433}{Get\+Player\+Names}} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the list of player names stored in the stats\+Data class. \end{DoxyCompactList}\item 
+List$<$ float $>$ \mbox{\hyperlink{class_stats_manager_a765e5de4e19d3bc8d16394f53d4d1c31}{Get\+Times}} ()
+\begin{DoxyCompactList}\small\item\em retrieve the list of time taken in the simulation stored in the stats\+Data class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_stats_manager_a62832584021cd11ccf06d53b69f9c260}\label{class_stats_manager_a62832584021cd11ccf06d53b69f9c260} 
+string {\bfseries current\+Name}
+\item 
+\Hypertarget{class_stats_manager_aae95adcfe80dc241c7412ec3da020450}\label{class_stats_manager_aae95adcfe80dc241c7412ec3da020450} 
+float {\bfseries current\+Elapsed\+Time}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that manages user stats taken from data acquired in the simulation scene. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_stats_manager_a4499a702e272627a5c293411cba09c43}\index{StatsManager@{StatsManager}!AddRecord@{AddRecord}}
+\index{AddRecord@{AddRecord}!StatsManager@{StatsManager}}
+\doxysubsubsection{\texorpdfstring{AddRecord()}{AddRecord()}}
+{\footnotesize\ttfamily \label{class_stats_manager_a4499a702e272627a5c293411cba09c43} 
+void Stats\+Manager.\+Add\+Record (\begin{DoxyParamCaption}\item[{string}]{player\+Name}{, }\item[{float}]{elapsed\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stores an instance of stats from a user\textquotesingle{}s session and then calls the Save\+Stats() method to save them. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Name} & \\
+\hline
+{\em elapsed\+Time} & a float value representing the user\textquotesingle{}s time taken from the current session \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_stats_manager_a3a4f7c6cf05c15c7ed1e55aef000efee}\index{StatsManager@{StatsManager}!getElapsedTime@{getElapsedTime}}
+\index{getElapsedTime@{getElapsedTime}!StatsManager@{StatsManager}}
+\doxysubsubsection{\texorpdfstring{getElapsedTime()}{getElapsedTime()}}
+{\footnotesize\ttfamily \label{class_stats_manager_a3a4f7c6cf05c15c7ed1e55aef000efee} 
+float Stats\+Manager.\+get\+Elapsed\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the time taken by the user from the simulation scene. 
+
+\begin{DoxyReturn}{Returns}
+The time taken in the simulation scene
+\end{DoxyReturn}
+@usage float time\+Taken = \doxylink{class_stats_manager_a3a4f7c6cf05c15c7ed1e55aef000efee}{get\+Elapsed\+Time()}; // time\+Taken will be the value of the current\+Elapsed\+Time \Hypertarget{class_stats_manager_a76062fa34f976f81489644c7e2510655}\index{StatsManager@{StatsManager}!getName@{getName}}
+\index{getName@{getName}!StatsManager@{StatsManager}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_stats_manager_a76062fa34f976f81489644c7e2510655} 
+string Stats\+Manager.\+get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the name set by the user. 
+
+\begin{DoxyReturn}{Returns}
+The name of the user
+\end{DoxyReturn}
+@usage String name = \doxylink{class_stats_manager_a76062fa34f976f81489644c7e2510655}{get\+Name()}; // name will be the value of current\+Name \Hypertarget{class_stats_manager_a262e612f92932f2bd9262b29dc45d433}\index{StatsManager@{StatsManager}!GetPlayerNames@{GetPlayerNames}}
+\index{GetPlayerNames@{GetPlayerNames}!StatsManager@{StatsManager}}
+\doxysubsubsection{\texorpdfstring{GetPlayerNames()}{GetPlayerNames()}}
+{\footnotesize\ttfamily \label{class_stats_manager_a262e612f92932f2bd9262b29dc45d433} 
+List$<$ string $>$ Stats\+Manager.\+Get\+Player\+Names (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the list of player names stored in the stats\+Data class. 
+
+\begin{DoxyReturn}{Returns}
+a list of player names 
+\end{DoxyReturn}
+\Hypertarget{class_stats_manager_a765e5de4e19d3bc8d16394f53d4d1c31}\index{StatsManager@{StatsManager}!GetTimes@{GetTimes}}
+\index{GetTimes@{GetTimes}!StatsManager@{StatsManager}}
+\doxysubsubsection{\texorpdfstring{GetTimes()}{GetTimes()}}
+{\footnotesize\ttfamily \label{class_stats_manager_a765e5de4e19d3bc8d16394f53d4d1c31} 
+List$<$ float $>$ Stats\+Manager.\+Get\+Times (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+retrieve the list of time taken in the simulation stored in the stats\+Data class 
+
+\begin{DoxyReturn}{Returns}
+a list of times 
+\end{DoxyReturn}
+\Hypertarget{class_stats_manager_a9490e7e6049fdbe6a9d006109455f138}\index{StatsManager@{StatsManager}!setElapsedTime@{setElapsedTime}}
+\index{setElapsedTime@{setElapsedTime}!StatsManager@{StatsManager}}
+\doxysubsubsection{\texorpdfstring{setElapsedTime()}{setElapsedTime()}}
+{\footnotesize\ttfamily \label{class_stats_manager_a9490e7e6049fdbe6a9d006109455f138} 
+void Stats\+Manager.\+set\+Elapsed\+Time (\begin{DoxyParamCaption}\item[{float}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the elapsed time as a float value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & a float that represents the time taken by the user\\
+\hline
+\end{DoxyParams}
+@usage set\+Elapsed\+Time(12.\+0); // current\+Elapsed\+Time stat will be 12.\+0 \Hypertarget{class_stats_manager_a8dd8c040a796614a61634a8fb34d2a2b}\index{StatsManager@{StatsManager}!setName@{setName}}
+\index{setName@{setName}!StatsManager@{StatsManager}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{class_stats_manager_a8dd8c040a796614a61634a8fb34d2a2b} 
+void Stats\+Manager.\+set\+Name (\begin{DoxyParamCaption}\item[{string}]{n}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the name of the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & a string that represents the name of the user\\
+\hline
+\end{DoxyParams}
+@usage set\+Name("{}\+Bob"{}); // current\+Name will be "{}\+Bob"{} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Stats\+Manager.\+cs\end{DoxyCompactItemize}
