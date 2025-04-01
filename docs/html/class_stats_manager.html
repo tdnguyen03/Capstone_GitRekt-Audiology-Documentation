@@ -105,6 +105,8 @@ $(function(){initNavTree('class_stats_manager.html',''); initResizable(true); })
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_stats_manager-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">StatsManager Class Reference</div></div>
 </div><!--header-->
@@ -122,7 +124,7 @@ Inheritance diagram for StatsManager:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4499a702e272627a5c293411cba09c43" id="r_a4499a702e272627a5c293411cba09c43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4499a702e272627a5c293411cba09c43">AddRecord</a> (string playerName, float elapsedTime)</td></tr>
-<tr class="memdesc:a4499a702e272627a5c293411cba09c43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores an instance of stats from a user's session and then calls the SaveStats() method to save them.  <br /></td></tr>
+<tr class="memdesc:a4499a702e272627a5c293411cba09c43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores an instance of stats from a user's session and then calls the <a class="el" href="#ac54714778b19eae75d63296b8169596d" title="a method that saves an instance of stats saved in the statsData class to the JSON file">SaveStats()</a> method to save them.  <br /></td></tr>
 <tr class="separator:a4499a702e272627a5c293411cba09c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dd8c040a796614a61634a8fb34d2a2b" id="r_a8dd8c040a796614a61634a8fb34d2a2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dd8c040a796614a61634a8fb34d2a2b">setName</a> (string n)</td></tr>
 <tr class="memdesc:a8dd8c040a796614a61634a8fb34d2a2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the name of the user.  <br /></td></tr>
@@ -136,9 +138,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3a4f7c6cf05c15c7ed1e55aef000efee" id="r_a3a4f7c6cf05c15c7ed1e55aef000efee"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a4f7c6cf05c15c7ed1e55aef000efee">getElapsedTime</a> ()</td></tr>
 <tr class="memdesc:a3a4f7c6cf05c15c7ed1e55aef000efee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the time taken by the user from the simulation scene.  <br /></td></tr>
 <tr class="separator:a3a4f7c6cf05c15c7ed1e55aef000efee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6358dade9e9391d0b20bdaea5b5b9a10" id="r_a6358dade9e9391d0b20bdaea5b5b9a10"><td class="memItemLeft" align="right" valign="top"><a id="a6358dade9e9391d0b20bdaea5b5b9a10" name="a6358dade9e9391d0b20bdaea5b5b9a10"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SaveCurrentRecord</b> ()</td></tr>
-<tr class="memdesc:a6358dade9e9391d0b20bdaea5b5b9a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">The initial method for keeping track of the name and time of the user called when the user inputs their name. <br /></td></tr>
+<tr class="memitem:a6358dade9e9391d0b20bdaea5b5b9a10" id="r_a6358dade9e9391d0b20bdaea5b5b9a10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6358dade9e9391d0b20bdaea5b5b9a10">SaveCurrentRecord</a> ()</td></tr>
+<tr class="memdesc:a6358dade9e9391d0b20bdaea5b5b9a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">The initial method for keeping track of the name and time of the user called when the user inputs their name.  <br /></td></tr>
 <tr class="separator:a6358dade9e9391d0b20bdaea5b5b9a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a262e612f92932f2bd9262b29dc45d433" id="r_a262e612f92932f2bd9262b29dc45d433"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a262e612f92932f2bd9262b29dc45d433">GetPlayerNames</a> ()</td></tr>
 <tr class="memdesc:a262e612f92932f2bd9262b29dc45d433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the list of player names stored in the statsData class.  <br /></td></tr>
@@ -149,12 +150,29 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SaveCurrentRecord</b>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a62832584021cd11ccf06d53b69f9c260" id="r_a62832584021cd11ccf06d53b69f9c260"><td class="memItemLeft" align="right" valign="top"><a id="a62832584021cd11ccf06d53b69f9c260" name="a62832584021cd11ccf06d53b69f9c260"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>currentName</b></td></tr>
+<tr class="memitem:a62832584021cd11ccf06d53b69f9c260" id="r_a62832584021cd11ccf06d53b69f9c260"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62832584021cd11ccf06d53b69f9c260">currentName</a></td></tr>
 <tr class="separator:a62832584021cd11ccf06d53b69f9c260"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae95adcfe80dc241c7412ec3da020450" id="r_aae95adcfe80dc241c7412ec3da020450"><td class="memItemLeft" align="right" valign="top"><a id="aae95adcfe80dc241c7412ec3da020450" name="aae95adcfe80dc241c7412ec3da020450"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</b></td></tr>
+<tr class="memitem:aae95adcfe80dc241c7412ec3da020450" id="r_aae95adcfe80dc241c7412ec3da020450"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae95adcfe80dc241c7412ec3da020450">currentElapsedTime</a></td></tr>
 <tr class="separator:aae95adcfe80dc241c7412ec3da020450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a5e6e9f77e8890216f150408c21fd6442" id="r_a5e6e9f77e8890216f150408c21fd6442"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e6e9f77e8890216f150408c21fd6442">Awake</a> ()</td></tr>
+<tr class="memdesc:a5e6e9f77e8890216f150408c21fd6442"><td class="mdescLeft">&#160;</td><td class="mdescRight">On awake mark the object to persist and keep track of the file path, then load the stats from the file.  <br /></td></tr>
+<tr class="separator:a5e6e9f77e8890216f150408c21fd6442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac54714778b19eae75d63296b8169596d" id="r_ac54714778b19eae75d63296b8169596d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac54714778b19eae75d63296b8169596d">SaveStats</a> ()</td></tr>
+<tr class="memdesc:ac54714778b19eae75d63296b8169596d"><td class="mdescLeft">&#160;</td><td class="mdescRight">a method that saves an instance of stats saved in the statsData class to the JSON file  <br /></td></tr>
+<tr class="separator:ac54714778b19eae75d63296b8169596d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f4e9fd1fec2156cd55af3538e0769f" id="r_aa1f4e9fd1fec2156cd55af3538e0769f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1f4e9fd1fec2156cd55af3538e0769f">LoadStats</a> ()</td></tr>
+<tr class="memdesc:aa1f4e9fd1fec2156cd55af3538e0769f"><td class="mdescLeft">&#160;</td><td class="mdescRight">a method that reads the stats file and loads them into the respective variables when called  <br /></td></tr>
+<tr class="separator:aa1f4e9fd1fec2156cd55af3538e0769f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a17a5b0cebecdf765618b0cae474baba7" id="r_a17a5b0cebecdf765618b0cae474baba7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stats_data.html">StatsData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17a5b0cebecdf765618b0cae474baba7">statsData</a> = new <a class="el" href="class_stats_data.html">StatsData</a>()</td></tr>
+<tr class="separator:a17a5b0cebecdf765618b0cae474baba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae07f93659afb19600a1a1b006baeec3a" id="r_ae07f93659afb19600a1a1b006baeec3a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae07f93659afb19600a1a1b006baeec3a">filePath</a></td></tr>
+<tr class="separator:ae07f93659afb19600a1a1b006baeec3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class that manages user stats taken from data acquired in the simulation scene. </p>
@@ -164,9 +182,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void StatsManager.AddRecord </td>
@@ -179,14 +194,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</
           <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>elapsedTime</em></span>&#160;)</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Stores an instance of stats from a user's session and then calls the SaveStats() method to save them. </p>
+<p>Stores an instance of stats from a user's session and then calls the <a class="el" href="#ac54714778b19eae75d63296b8169596d" title="a method that saves an instance of stats saved in the statsData class to the JSON file">SaveStats()</a> method to save them. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">playerName</td><td></td></tr>
@@ -197,8 +207,8 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</
 
 </div>
 </div>
-<a id="a3a4f7c6cf05c15c7ed1e55aef000efee" name="a3a4f7c6cf05c15c7ed1e55aef000efee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a4f7c6cf05c15c7ed1e55aef000efee">&#9670;&#160;</a></span>getElapsedTime()</h2>
+<a id="a5e6e9f77e8890216f150408c21fd6442" name="a5e6e9f77e8890216f150408c21fd6442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e6e9f77e8890216f150408c21fd6442">&#9670;&#160;</a></span>Awake()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,7 +217,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float StatsManager.getElapsedTime </td>
+          <td class="memname">void StatsManager.Awake </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -215,9 +225,28 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+<p>On awake mark the object to persist and keep track of the file path, then load the stats from the file. </p>
+
+</div>
+</div>
+<a id="a3a4f7c6cf05c15c7ed1e55aef000efee" name="a3a4f7c6cf05c15c7ed1e55aef000efee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a4f7c6cf05c15c7ed1e55aef000efee">&#9670;&#160;</a></span>getElapsedTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StatsManager.getElapsedTime </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 <p>Gets the time taken by the user from the simulation scene. </p>
@@ -231,9 +260,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">string StatsManager.getName </td>
@@ -242,11 +268,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Gets the name set by the user. </p>
@@ -260,9 +281,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">List&lt; string &gt; StatsManager.GetPlayerNames </td>
@@ -271,11 +289,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Retrieve the list of player names stored in the statsData class. </p>
@@ -288,9 +301,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">List&lt; float &gt; StatsManager.GetTimes </td>
@@ -299,11 +309,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>retrieve the list of time taken in the simulation stored in the statsData class </p>
@@ -311,8 +316,8 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</
 
 </div>
 </div>
-<a id="a9490e7e6049fdbe6a9d006109455f138" name="a9490e7e6049fdbe6a9d006109455f138"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9490e7e6049fdbe6a9d006109455f138">&#9670;&#160;</a></span>setElapsedTime()</h2>
+<a id="aa1f4e9fd1fec2156cd55af3538e0769f" name="aa1f4e9fd1fec2156cd55af3538e0769f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f4e9fd1fec2156cd55af3538e0769f">&#9670;&#160;</a></span>LoadStats()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -321,17 +326,82 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</
   <td class="mlabels-left">
       <table class="memname">
         <tr>
+          <td class="memname">void StatsManager.LoadStats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>a method that reads the stats file and loads them into the respective variables when called </p>
+
+</div>
+</div>
+<a id="a6358dade9e9391d0b20bdaea5b5b9a10" name="a6358dade9e9391d0b20bdaea5b5b9a10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6358dade9e9391d0b20bdaea5b5b9a10">&#9670;&#160;</a></span>SaveCurrentRecord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StatsManager.SaveCurrentRecord </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The initial method for keeping track of the name and time of the user called when the user inputs their name. </p>
+
+</div>
+</div>
+<a id="ac54714778b19eae75d63296b8169596d" name="ac54714778b19eae75d63296b8169596d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac54714778b19eae75d63296b8169596d">&#9670;&#160;</a></span>SaveStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StatsManager.SaveStats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>a method that saves an instance of stats saved in the statsData class to the JSON file </p>
+
+</div>
+</div>
+<a id="a9490e7e6049fdbe6a9d006109455f138" name="a9490e7e6049fdbe6a9d006109455f138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9490e7e6049fdbe6a9d006109455f138">&#9670;&#160;</a></span>setElapsedTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
           <td class="memname">void StatsManager.setElapsedTime </td>
           <td>(</td>
           <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Sets the elapsed time as a float value. </p>
@@ -350,9 +420,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void StatsManager.setName </td>
@@ -361,11 +428,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Sets the name of the user. </p>
@@ -379,8 +441,81 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>currentElapsedTime</
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aae95adcfe80dc241c7412ec3da020450" name="aae95adcfe80dc241c7412ec3da020450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae95adcfe80dc241c7412ec3da020450">&#9670;&#160;</a></span>currentElapsedTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StatsManager.currentElapsedTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62832584021cd11ccf06d53b69f9c260" name="a62832584021cd11ccf06d53b69f9c260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62832584021cd11ccf06d53b69f9c260">&#9670;&#160;</a></span>currentName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string StatsManager.currentName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae07f93659afb19600a1a1b006baeec3a" name="ae07f93659afb19600a1a1b006baeec3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae07f93659afb19600a1a1b006baeec3a">&#9670;&#160;</a></span>filePath</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string StatsManager.filePath</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17a5b0cebecdf765618b0cae474baba7" name="a17a5b0cebecdf765618b0cae474baba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a5b0cebecdf765618b0cae474baba7">&#9670;&#160;</a></span>statsData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_stats_data.html">StatsData</a> StatsManager.statsData = new <a class="el" href="class_stats_data.html">StatsData</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><b>StatsManager.cs</b></li>
+<li><a class="el" href="_stats_manager_8cs.html">StatsManager.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

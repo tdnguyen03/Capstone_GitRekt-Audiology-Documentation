@@ -105,6 +105,8 @@ $(function(){initNavTree('class_stats_scene_script.html',''); initResizable(true
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_stats_scene_script-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">StatsSceneScript Class Reference</div></div>
 </div><!--header-->
@@ -127,14 +129,30 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a6a66cd317683b49d0f4a964f7aab2b25" id="r_a6a66cd317683b49d0f4a964f7aab2b25"><td class="memItemLeft" align="right" valign="top"><a id="a6a66cd317683b49d0f4a964f7aab2b25" name="a6a66cd317683b49d0f4a964f7aab2b25"></a>
-Text&#160;</td><td class="memItemRight" valign="bottom"><b>statsText</b></td></tr>
-<tr class="memdesc:a6a66cd317683b49d0f4a964f7aab2b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI Text element to display player statistics. <br /></td></tr>
+<tr class="memitem:a6a66cd317683b49d0f4a964f7aab2b25" id="r_a6a66cd317683b49d0f4a964f7aab2b25"><td class="memItemLeft" align="right" valign="top">Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a66cd317683b49d0f4a964f7aab2b25">statsText</a></td></tr>
+<tr class="memdesc:a6a66cd317683b49d0f4a964f7aab2b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI Text element to display player statistics.  <br /></td></tr>
 <tr class="separator:a6a66cd317683b49d0f4a964f7aab2b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2cb7d183e16875939b927b5b7545d7e" id="r_ad2cb7d183e16875939b927b5b7545d7e"><td class="memItemLeft" align="right" valign="top"><a id="ad2cb7d183e16875939b927b5b7545d7e" name="ad2cb7d183e16875939b927b5b7545d7e"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>mainMenuScene</b></td></tr>
-<tr class="memdesc:ad2cb7d183e16875939b927b5b7545d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the main menu scene to load. <br /></td></tr>
+<tr class="memitem:ad2cb7d183e16875939b927b5b7545d7e" id="r_ad2cb7d183e16875939b927b5b7545d7e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2cb7d183e16875939b927b5b7545d7e">mainMenuScene</a></td></tr>
+<tr class="memdesc:ad2cb7d183e16875939b927b5b7545d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the main menu scene to load.  <br /></td></tr>
 <tr class="separator:ad2cb7d183e16875939b927b5b7545d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4ad6312ca8bee5fdf4469d096be442d0" id="r_a4ad6312ca8bee5fdf4469d096be442d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ad6312ca8bee5fdf4469d096be442d0">Start</a> ()</td></tr>
+<tr class="memdesc:a4ad6312ca8bee5fdf4469d096be442d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unity Start method.  <br /></td></tr>
+<tr class="separator:a4ad6312ca8bee5fdf4469d096be442d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1034c8ed649b62a7db8057b1150058aa" id="r_a1034c8ed649b62a7db8057b1150058aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1034c8ed649b62a7db8057b1150058aa">LoadStats</a> ()</td></tr>
+<tr class="memdesc:a1034c8ed649b62a7db8057b1150058aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads player statistics from the JSON file and displays them in the UI Text element.  <br /></td></tr>
+<tr class="separator:a1034c8ed649b62a7db8057b1150058aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e5ca9c33da9484be238b04143ea41d9" id="r_a2e5ca9c33da9484be238b04143ea41d9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e5ca9c33da9484be238b04143ea41d9">FormatTime</a> (float time)</td></tr>
+<tr class="memdesc:a2e5ca9c33da9484be238b04143ea41d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats the time in seconds to a string in MM:SS format.  <br /></td></tr>
+<tr class="separator:a2e5ca9c33da9484be238b04143ea41d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab04187483b36003eed72f58987c875be" id="r_ab04187483b36003eed72f58987c875be"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab04187483b36003eed72f58987c875be">filePath</a></td></tr>
+<tr class="memdesc:ab04187483b36003eed72f58987c875be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to the JSON file containing player statistics.  <br /></td></tr>
+<tr class="separator:ab04187483b36003eed72f58987c875be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class handles the display of player statistics in the Stats scene from a JSON file. </p>
@@ -145,9 +163,6 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>mainMenuScene</b></
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void StatsSceneScript.BackToMainMenu </td>
@@ -156,11 +171,6 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>mainMenuScene</b></
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Loads the main menu scene. </p>
@@ -168,8 +178,155 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>mainMenuScene</b></
 
 </div>
 </div>
+<a id="a2e5ca9c33da9484be238b04143ea41d9" name="a2e5ca9c33da9484be238b04143ea41d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e5ca9c33da9484be238b04143ea41d9">&#9670;&#160;</a></span>FormatTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string StatsSceneScript.FormatTime </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Formats the time in seconds to a string in MM:SS format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>The time in seconds to format. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string representing the formatted time. </dd></dl>
+
+</div>
+</div>
+<a id="a1034c8ed649b62a7db8057b1150058aa" name="a1034c8ed649b62a7db8057b1150058aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1034c8ed649b62a7db8057b1150058aa">&#9670;&#160;</a></span>LoadStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StatsSceneScript.LoadStats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads player statistics from the JSON file and displays them in the UI Text element. </p>
+<p>Reads the stats JSON file, parses it, and updates the <code>statsText</code> UI element with the player names and times. If the file does not exist or is empty, it displays a default message. </p>
+
+</div>
+</div>
+<a id="a4ad6312ca8bee5fdf4469d096be442d0" name="a4ad6312ca8bee5fdf4469d096be442d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ad6312ca8bee5fdf4469d096be442d0">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StatsSceneScript.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unity Start method. </p>
+<p>Initializes the file path for the JSON file and calls the LoadStats method to read and display player statistics. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab04187483b36003eed72f58987c875be" name="ab04187483b36003eed72f58987c875be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab04187483b36003eed72f58987c875be">&#9670;&#160;</a></span>filePath</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string StatsSceneScript.filePath</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Path to the JSON file containing player statistics. </p>
+
+</div>
+</div>
+<a id="ad2cb7d183e16875939b927b5b7545d7e" name="ad2cb7d183e16875939b927b5b7545d7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2cb7d183e16875939b927b5b7545d7e">&#9670;&#160;</a></span>mainMenuScene</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string StatsSceneScript.mainMenuScene</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Name of the main menu scene to load. </p>
+
+</div>
+</div>
+<a id="a6a66cd317683b49d0f4a964f7aab2b25" name="a6a66cd317683b49d0f4a964f7aab2b25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a66cd317683b49d0f4a964f7aab2b25">&#9670;&#160;</a></span>statsText</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Text StatsSceneScript.statsText</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UI Text element to display player statistics. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><b>DisplayStats.cs</b></li>
+<li><a class="el" href="_display_stats_8cs.html">DisplayStats.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
