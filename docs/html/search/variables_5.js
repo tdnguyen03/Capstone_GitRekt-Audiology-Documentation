@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['times_0',['times',['../class_stats_data.html#adcbe2710209b18f613450ab8b279ee14',1,'StatsData']]]
+  ['lefthead_0',['leftHead',['../class_head_loader.html#a5fa25094321ffe0bbbf6057d4caaaab0',1,'HeadLoader']]]
 ];

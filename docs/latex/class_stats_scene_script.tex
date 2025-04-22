@@ -14,6 +14,10 @@ Inheritance diagram for Stats\+Scene\+Script\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{class_stats_scene_script_a08801cb6408b2521b944585845e52f93}{On\+Search\+Button\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em Stats Search Button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stats_scene_script_a111b7846b65accbacb23b2c1f60c89fe}{On\+Sort\+Option\+Changed}} (int index)
+\begin{DoxyCompactList}\small\item\em When the sort options change, sort the stats. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_stats_scene_script_a9320d3bc1f20900f3dc09ba1d397696a}{Back\+To\+Main\+Menu}} ()
 \begin{DoxyCompactList}\small\item\em Loads the main menu scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
@@ -28,7 +32,7 @@ string \mbox{\hyperlink{class_stats_scene_script_ad2cb7d183e16875939b927b5b7545d
 \item 
 void \mbox{\hyperlink{class_stats_scene_script_a4ad6312ca8bee5fdf4469d096be442d0}{Start}} ()
 \begin{DoxyCompactList}\small\item\em Unity Start method. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_stats_scene_script_a1034c8ed649b62a7db8057b1150058aa}{Load\+Stats}} ()
+void \mbox{\hyperlink{class_stats_scene_script_a3e39e448d01f2df86debae2ede7cd7ed}{Load\+Stats}} (string name\+Filter="{}"{})
 \begin{DoxyCompactList}\small\item\em Loads player statistics from the JSON file and displays them in the UI Text element. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_stats_scene_script_a2e5ca9c33da9484be238b04143ea41d9}{Format\+Time}} (float time)
 \begin{DoxyCompactList}\small\item\em Formats the time in seconds to a string in MM\+:SS format. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -73,17 +77,47 @@ Formats the time in seconds to a string in MM\+:SS format.
 \begin{DoxyReturn}{Returns}
 A string representing the formatted time. 
 \end{DoxyReturn}
-\Hypertarget{class_stats_scene_script_a1034c8ed649b62a7db8057b1150058aa}\index{StatsSceneScript@{StatsSceneScript}!LoadStats@{LoadStats}}
+\Hypertarget{class_stats_scene_script_a3e39e448d01f2df86debae2ede7cd7ed}\index{StatsSceneScript@{StatsSceneScript}!LoadStats@{LoadStats}}
 \index{LoadStats@{LoadStats}!StatsSceneScript@{StatsSceneScript}}
 \doxysubsubsection{\texorpdfstring{LoadStats()}{LoadStats()}}
-{\footnotesize\ttfamily \label{class_stats_scene_script_a1034c8ed649b62a7db8057b1150058aa} 
-void Stats\+Scene\+Script.\+Load\+Stats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \label{class_stats_scene_script_a3e39e448d01f2df86debae2ede7cd7ed} 
+void Stats\+Scene\+Script.\+Load\+Stats (\begin{DoxyParamCaption}\item[{string}]{name\+Filter}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Loads player statistics from the JSON file and displays them in the UI Text element. 
 
-Reads the stats JSON file, parses it, and updates the {\ttfamily stats\+Text} UI element with the player names and times. If the file does not exist or is empty, it displays a default message. \Hypertarget{class_stats_scene_script_a4ad6312ca8bee5fdf4469d096be442d0}\index{StatsSceneScript@{StatsSceneScript}!Start@{Start}}
+Reads the stats JSON file, parses it, and updates the {\ttfamily stats\+Text} UI element with the player names and times using the search filter. If the file does not exist or is empty, it displays a default message. 
+\begin{DoxyParams}{Parameters}
+{\em name\+Filter} & the filter for the search bar \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_stats_scene_script_a08801cb6408b2521b944585845e52f93}\index{StatsSceneScript@{StatsSceneScript}!OnSearchButtonPressed@{OnSearchButtonPressed}}
+\index{OnSearchButtonPressed@{OnSearchButtonPressed}!StatsSceneScript@{StatsSceneScript}}
+\doxysubsubsection{\texorpdfstring{OnSearchButtonPressed()}{OnSearchButtonPressed()}}
+{\footnotesize\ttfamily \label{class_stats_scene_script_a08801cb6408b2521b944585845e52f93} 
+void Stats\+Scene\+Script.\+On\+Search\+Button\+Pressed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stats Search Button. 
+
+when clicked, load the stats with search input \Hypertarget{class_stats_scene_script_a111b7846b65accbacb23b2c1f60c89fe}\index{StatsSceneScript@{StatsSceneScript}!OnSortOptionChanged@{OnSortOptionChanged}}
+\index{OnSortOptionChanged@{OnSortOptionChanged}!StatsSceneScript@{StatsSceneScript}}
+\doxysubsubsection{\texorpdfstring{OnSortOptionChanged()}{OnSortOptionChanged()}}
+{\footnotesize\ttfamily \label{class_stats_scene_script_a111b7846b65accbacb23b2c1f60c89fe} 
+void Stats\+Scene\+Script.\+On\+Sort\+Option\+Changed (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+When the sort options change, sort the stats. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & the index of the sort mode being used \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_stats_scene_script_a4ad6312ca8bee5fdf4469d096be442d0}\index{StatsSceneScript@{StatsSceneScript}!Start@{Start}}
 \index{Start@{Start}!StatsSceneScript@{StatsSceneScript}}
 \doxysubsubsection{\texorpdfstring{Start()}{Start()}}
 {\footnotesize\ttfamily \label{class_stats_scene_script_a4ad6312ca8bee5fdf4469d096be442d0} 

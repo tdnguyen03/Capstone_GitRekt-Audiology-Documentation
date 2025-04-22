@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['formattime_0',['FormatTime',['../class_stats_scene_script.html#a2e5ca9c33da9484be238b04143ea41d9',1,'StatsSceneScript']]]
+  ['closesettings_0',['CloseSettings',['../class_main_menu.html#addf8a654dc708ed21f320de69bd28126',1,'MainMenu']]]
 ];

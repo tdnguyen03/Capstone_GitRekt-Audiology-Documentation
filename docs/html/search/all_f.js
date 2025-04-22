@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['savecurrentrecord_0',['SaveCurrentRecord',['../class_stats_manager.html#a6358dade9e9391d0b20bdaea5b5b9a10',1,'StatsManager']]],
+  ['savestats_1',['SaveStats',['../class_stats_manager.html#ac54714778b19eae75d63296b8169596d',1,'StatsManager']]],
+  ['setelapsedtime_2',['setElapsedTime',['../class_stats_manager.html#a9490e7e6049fdbe6a9d006109455f138',1,'StatsManager']]],
+  ['setname_3',['setName',['../class_stats_manager.html#a8dd8c040a796614a61634a8fb34d2a2b',1,'StatsManager']]],
+  ['settingscanvas_4',['settingsCanvas',['../class_main_menu.html#a86afefea5ee2b5bf3683181baee539c8',1,'MainMenu']]],
+  ['settingsscript_5',['SettingsScript',['../class_settings_script.html',1,'']]],
+  ['settingsscript_2ecs_6',['SettingsScript.cs',['../_settings_script_8cs.html',1,'']]],
+  ['start_7',['Start',['../class_stats_scene_script.html#a4ad6312ca8bee5fdf4469d096be442d0',1,'StatsSceneScript.Start()'],['../class_end_scene_script.html#ab617bf9f84658f128417ee2f8b2b8341',1,'EndSceneScript.Start()'],['../class_head_loader.html#a0e998051a1b2a8c10bc233480355072e',1,'HeadLoader.Start()'],['../class_main_menu.html#ad629921d8cbec1c1bf97e6bc6ad65902',1,'MainMenu.Start()']]],
+  ['startgame_8',['StartGame',['../class_main_menu.html#ac2a74cb6e3c827e2a8db8c41141f0984',1,'MainMenu']]],
+  ['startgamescene_9',['startGameScene',['../class_main_menu.html#ae774b0636070842ecfe698fedae733d1',1,'MainMenu']]],
+  ['statsdata_10',['StatsData',['../class_stats_data.html',1,'']]],
+  ['statsdata_11',['statsData',['../class_stats_manager.html#a17a5b0cebecdf765618b0cae474baba7',1,'StatsManager']]],
+  ['statsmanager_12',['StatsManager',['../class_stats_manager.html',1,'']]],
+  ['statsmanager_13',['statsManager',['../class_v_r_user_name_input_script.html#a34f6f0fd20450ac240274b628c4fb6ff',1,'VRUserNameInputScript']]],
+  ['statsmanager_2ecs_14',['StatsManager.cs',['../_stats_manager_8cs.html',1,'']]],
+  ['statsscene_15',['statsScene',['../class_end_scene_script.html#a1e100ab2e0fa061f84605b874bb87e9d',1,'EndSceneScript.statsScene'],['../class_main_menu.html#a591a789ef01967c86a76b35ded845c1e',1,'MainMenu.statsScene']]],
+  ['statsscenescript_16',['StatsSceneScript',['../class_stats_scene_script.html',1,'']]],
+  ['statstext_17',['statsText',['../class_stats_scene_script.html#a6a66cd317683b49d0f4a964f7aab2b25',1,'StatsSceneScript']]]
+];

@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['getelapsedtime_0',['getElapsedTime',['../class_stats_manager.html#a3a4f7c6cf05c15c7ed1e55aef000efee',1,'StatsManager']]],
-  ['getname_1',['getName',['../class_stats_manager.html#a76062fa34f976f81489644c7e2510655',1,'StatsManager']]],
-  ['getplayernames_2',['GetPlayerNames',['../class_stats_manager.html#a262e612f92932f2bd9262b29dc45d433',1,'StatsManager']]],
-  ['gettimes_3',['GetTimes',['../class_stats_manager.html#a765e5de4e19d3bc8d16394f53d4d1c31',1,'StatsManager']]]
+  ['filepath_0',['filePath',['../class_stats_scene_script.html#ab04187483b36003eed72f58987c875be',1,'StatsSceneScript.filePath'],['../class_stats_manager.html#ae07f93659afb19600a1a1b006baeec3a',1,'StatsManager.filePath']]],
+  ['formattime_1',['FormatTime',['../class_stats_scene_script.html#a2e5ca9c33da9484be238b04143ea41d9',1,'StatsSceneScript']]]
 ];

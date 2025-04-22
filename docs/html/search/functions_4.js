@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['loadstats_0',['LoadStats',['../class_stats_scene_script.html#a1034c8ed649b62a7db8057b1150058aa',1,'StatsSceneScript.LoadStats()'],['../class_stats_manager.html#aa1f4e9fd1fec2156cd55af3538e0769f',1,'StatsManager.LoadStats()']]]
+  ['getelapsedtime_0',['getElapsedTime',['../class_stats_manager.html#a3a4f7c6cf05c15c7ed1e55aef000efee',1,'StatsManager']]],
+  ['getname_1',['getName',['../class_stats_manager.html#a76062fa34f976f81489644c7e2510655',1,'StatsManager']]],
+  ['getplayernames_2',['GetPlayerNames',['../class_stats_manager.html#a262e612f92932f2bd9262b29dc45d433',1,'StatsManager']]],
+  ['gettimes_3',['GetTimes',['../class_stats_manager.html#a765e5de4e19d3bc8d16394f53d4d1c31',1,'StatsManager']]],
+  ['gotostatsscene_4',['GoToStatsScene',['../class_end_scene_script.html#aa2c5f6854eee6ee8d7e4b58ff01e4c4c',1,'EndSceneScript.GoToStatsScene()'],['../class_main_menu.html#a01e164e306dae8156417d981c406cd0c',1,'MainMenu.GoToStatsScene()']]]
 ];
