@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * @brief A class that manages the scene to start the game after a name is entered
+*/
 public class VRUserNameInputScript : MonoBehaviour 
 {
     [SerializeField] InputField inputField;

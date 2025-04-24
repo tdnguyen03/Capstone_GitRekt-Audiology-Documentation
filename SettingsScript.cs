@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * @brief This class manages the settings pop up in the main menu
+ * @details records and updates changes to the settings such as cerumen and canal type.
+*/
 public class SettingsScript : MonoBehaviour
 {
     [SerializeField] Text CerumenText;

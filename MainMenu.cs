@@ -1,6 +1,11 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+
+/**
+ * @brief This class handles the main menu scene functionality
+ * @details MainMenu initializes starter settings and allows changes to different scenes and opening the settings menu through buttons.
+*/
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] Canvas settingsCanvas;

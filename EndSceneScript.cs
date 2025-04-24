@@ -2,6 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/**
+ * @brief This class handles the end scene functionality
+ * @details EndSceneScript retrieves and displays the stats to the user and allows changes to different scenes through buttons.
+*/
 public class EndSceneScript : MonoBehaviour
 {
     public string mainMenuScene;

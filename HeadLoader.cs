@@ -1,5 +1,9 @@
 using UnityEngine;
 
+
+/**
+ * @brief This class manages the spawning of the head object in the simulation scene
+*/
 public class HeadLoader : MonoBehaviour
 {
     [SerializeField] GameObject leftHead;
