@@ -6,7 +6,15 @@ using UnityEngine.UI;
 */
 public class KeyboardScript : MonoBehaviour
 {
+
+    /**
+     * @brief text box element for keyboard input
+    */
     public InputField inputField;
+
+    /**
+     * @brief text of the key to append to the input field
+    */
     public Text textField;
 
     /**

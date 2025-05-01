@@ -7,8 +7,20 @@ using UnityEngine.UI;
 */
 public class SettingsScript : MonoBehaviour
 {
+
+    /**
+     * @brief label for cerumen amount
+    */
     [SerializeField] Text CerumenText;
+
+    /**
+     * @brief slider element for cerumen amount
+    */
     [SerializeField] Slider cerumenSlider;
+
+    /**
+     * @brief label for canal type
+    */
     [SerializeField] Text CanalText;
 
     /**

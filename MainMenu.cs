@@ -8,8 +8,19 @@ using UnityEngine.SceneManagement;
 */
 public class MainMenu : MonoBehaviour
 {
+    /**
+     * @brief the settings menu UI element
+    */
     [SerializeField] Canvas settingsCanvas;
+
+    /**
+     * @brief name of the start game scene
+    */
     public string startGameScene;
+
+    /**
+     * @brief name of the stats scene
+    */
     public string statsScene;
 
     /**

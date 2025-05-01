@@ -21,11 +21,25 @@ public class StatsData
  */
 public class StatsManager : MonoBehaviour
 {
+
+    /**
+     * @brief new instance of StatsData class
+    */
     private StatsData statsData = new StatsData();
+
+    /**
+     * @brief file path
+    */
     private string filePath;
 
+    /**
+     * @brief name input by the user
+    */
     public string currentName;
 
+    /**
+     * @brief elapsed time in the simulation scene
+    */
 	public float currentElapsedTime;
 
 

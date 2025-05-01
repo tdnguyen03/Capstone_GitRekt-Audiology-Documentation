@@ -6,8 +6,20 @@ using UnityEngine;
 */
 public class HeadLoader : MonoBehaviour
 {
+
+    /**
+     * @brief left head game object
+    */
     [SerializeField] GameObject leftHead;
+
+    /**
+     * @brief right head game object
+    */
     [SerializeField] GameObject rightHead;
+
+    /**
+     * @brief head game object
+    */
     [SerializeField] GameObject head;
 
     /**

@@ -8,10 +8,29 @@ using UnityEngine.UI;
 */
 public class VRUserNameInputScript : MonoBehaviour 
 {
+    /**
+     * @brief the text box that contains the user's name
+    */
     [SerializeField] InputField inputField;
+
+     /**
+     * @brief script for the timer
+    */
     [SerializeField] TimerScript timerScript;
+
+    /**
+     * @brief stats manager game object
+    */
     [SerializeField] GameObject statsManager;
+
+    /**
+     * @brief keyboard game object
+    */
     [SerializeField] GameObject keyboardUI;
+
+    /**
+     * @brief timer gmae object
+    */
     [SerializeField] GameObject timerUI;
 
 

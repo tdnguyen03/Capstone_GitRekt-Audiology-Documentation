@@ -10,6 +10,27 @@ using UnityEngine.SceneManagement;
 */
 public class StatsSceneScript : MonoBehaviour
 {
+
+    /**
+     * @brief the transform value of the content parent
+    */
+    public Transform contentParent;
+
+    /**
+     * @brief a prefab of a stat entry row in the table
+    */
+    public GameObject statEntryRowPrefab;
+
+    /**
+     * @brief UI Input field for searching
+    */
+    public InputField searchInput;
+
+    /**
+     * @brief UI Dropdown element for sorting
+    */
+    public Dropdown sortDropdown;
+
     /**
      * @brief UI Text element to display player statistics.
     */
@@ -22,6 +43,16 @@ public class StatsSceneScript : MonoBehaviour
      * @brief Name of the main menu scene to load.
     */
     public string mainMenuScene;
+
+    /**
+     * @brief Different types of sort mode
+    */
+    private enum SortMode { LastCompleted, Fastest, Slowest }
+
+    /**
+     * @brief Current sort mode
+    */
+    private SortMode currentSortMode = SortMode.LastCompleted;
 
     /**
      * @brief Unity Start method.

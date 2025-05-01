@@ -8,9 +8,25 @@ using UnityEngine.SceneManagement;
 */
 public class EndSceneScript : MonoBehaviour
 {
+
+    /**
+     * @brief name of the main menu scene
+    */
     public string mainMenuScene;
+
+    /**
+     * @brief name of the stats scene
+    */
     public string statsScene;
+
+    /**
+     * @brief text element to congratulate the suser
+    */
     public Text introText;
+
+    /**
+     * @brief text element of time taken
+    */
     public Text timeText;
 
     /**
