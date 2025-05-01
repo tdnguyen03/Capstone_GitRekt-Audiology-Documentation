@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Capstone Audiology Project", "index.html", [
+  [ "Capstone Audiology Documentation", "index.html", [
     [ "Capstone_GitRekt-Audiology-Documentation", "md__r_e_a_d_m_e.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -33,7 +33,8 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "Variables", "functions_vars.html", null ],
+        [ "Enumerations", "functions_enum.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -44,7 +45,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_display_stats_8cs.html"
+"_clock_script_8cs.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

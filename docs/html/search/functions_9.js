@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['validateinput_0',['ValidateInput',['../class_v_r_user_name_input_script.html#a4cb79af3ee35f04ef5b5ec1b507cd1f2',1,'VRUserNameInputScript']]]
+  ['pause_0',['Pause',['../class_pause_menu_script.html#a9eedcd406392a0af822591bab3e2f3ad',1,'PauseMenuScript']]],
+  ['pauseclock_1',['PauseClock',['../class_clock_script.html#ab74e773358a8fb05f229c4266e44811f',1,'ClockScript']]]
 ];

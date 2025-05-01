@@ -1,9 +1,11 @@
 var annotated_dup =
 [
+    [ "ClockScript", "class_clock_script.html", "class_clock_script" ],
     [ "EndSceneScript", "class_end_scene_script.html", "class_end_scene_script" ],
     [ "HeadLoader", "class_head_loader.html", "class_head_loader" ],
     [ "KeyboardScript", "class_keyboard_script.html", "class_keyboard_script" ],
     [ "MainMenu", "class_main_menu.html", "class_main_menu" ],
+    [ "PauseMenuScript", "class_pause_menu_script.html", "class_pause_menu_script" ],
     [ "SettingsScript", "class_settings_script.html", "class_settings_script" ],
     [ "StatsData", "class_stats_data.html", "class_stats_data" ],
     [ "StatsManager", "class_stats_manager.html", "class_stats_manager" ],

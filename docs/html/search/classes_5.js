@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vrusernameinputscript_0',['VRUserNameInputScript',['../class_v_r_user_name_input_script.html',1,'']]]
+  ['pausemenuscript_0',['PauseMenuScript',['../class_pause_menu_script.html',1,'']]]
 ];

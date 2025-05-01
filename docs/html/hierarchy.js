@@ -1,10 +1,12 @@
 var hierarchy =
 [
     [ "MonoBehaviour", null, [
+      [ "ClockScript", "class_clock_script.html", null ],
       [ "EndSceneScript", "class_end_scene_script.html", null ],
       [ "HeadLoader", "class_head_loader.html", null ],
       [ "KeyboardScript", "class_keyboard_script.html", null ],
       [ "MainMenu", "class_main_menu.html", null ],
+      [ "PauseMenuScript", "class_pause_menu_script.html", null ],
       [ "SettingsScript", "class_settings_script.html", null ],
       [ "StatsManager", "class_stats_manager.html", null ],
       [ "StatsSceneScript", "class_stats_scene_script.html", null ],

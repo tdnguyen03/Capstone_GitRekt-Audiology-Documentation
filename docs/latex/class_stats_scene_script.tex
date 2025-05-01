@@ -23,10 +23,26 @@ void \mbox{\hyperlink{class_stats_scene_script_a9320d3bc1f20900f3dc09ba1d397696a
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
+Transform \mbox{\hyperlink{class_stats_scene_script_aca9a15a2f2fe86e94362d72568a48375}{content\+Parent}}
+\begin{DoxyCompactList}\small\item\em the transform value of the content parent \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_stats_scene_script_aaca0392bed5f0b13496e0ce08a0e18ad}{stat\+Entry\+Row\+Prefab}}
+\begin{DoxyCompactList}\small\item\em a prefab of a stat entry row in the table \end{DoxyCompactList}\item 
+Input\+Field \mbox{\hyperlink{class_stats_scene_script_a636556d28d6aaa596611250969f77555}{search\+Input}}
+\begin{DoxyCompactList}\small\item\em UI Input field for searching. \end{DoxyCompactList}\item 
+Dropdown \mbox{\hyperlink{class_stats_scene_script_ad992db338a4fe3f3c2fcb7f8c7f17ee3}{sort\+Dropdown}}
+\begin{DoxyCompactList}\small\item\em UI Dropdown element for sorting. \end{DoxyCompactList}\item 
 Text \mbox{\hyperlink{class_stats_scene_script_a6a66cd317683b49d0f4a964f7aab2b25}{stats\+Text}}
 \begin{DoxyCompactList}\small\item\em UI Text element to display player statistics. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_stats_scene_script_ad2cb7d183e16875939b927b5b7545d7e}{main\+Menu\+Scene}}
 \begin{DoxyCompactList}\small\item\em Name of the main menu scene to load. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360}{Sort\+Mode}} \{ \mbox{\hyperlink{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360a2ab0e44b5d7c14a53e4b4d25a2047c0d}{Last\+Completed}}
+, \mbox{\hyperlink{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360a90fd7fdf6f41406a75e5265b9583bb4e}{Fastest}}
+, \mbox{\hyperlink{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360a53ad658aa3b68ee6f8ac34262f27efc5}{Slowest}}
+ \}
+\begin{DoxyCompactList}\small\item\em Different types of sort mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,13 +56,42 @@ string \mbox{\hyperlink{class_stats_scene_script_a2e5ca9c33da9484be238b04143ea41
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{class_stats_scene_script_ab04187483b36003eed72f58987c875be}{file\+Path}}
-\begin{DoxyCompactList}\small\item\em Path to the JSON file containing player statistics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Path to the JSON file containing player statistics. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360}{Sort\+Mode}} \mbox{\hyperlink{class_stats_scene_script_a37af2d2c97836290e7473bbafbad047e}{current\+Sort\+Mode}} = \mbox{\hyperlink{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360a2ab0e44b5d7c14a53e4b4d25a2047c0d}{Sort\+Mode.\+Last\+Completed}}
+\begin{DoxyCompactList}\small\item\em Current sort mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 This class handles the display of player statistics in the Stats scene from a JSON file. 
 
 It reads the player names and their corresponding simulation times from the JSON file and displays them in a UI Text element. It also provides a method to return to the main menu scene. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360}\index{StatsSceneScript@{StatsSceneScript}!SortMode@{SortMode}}
+\index{SortMode@{SortMode}!StatsSceneScript@{StatsSceneScript}}
+\doxysubsubsection{\texorpdfstring{SortMode}{SortMode}}
+{\footnotesize\ttfamily \label{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360} 
+enum \mbox{\hyperlink{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360}{Stats\+Scene\+Script.\+Sort\+Mode}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Different types of sort mode. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LastCompleted@{LastCompleted}!StatsSceneScript@{StatsSceneScript}}\index{StatsSceneScript@{StatsSceneScript}!LastCompleted@{LastCompleted}}}\Hypertarget{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360a2ab0e44b5d7c14a53e4b4d25a2047c0d}\label{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360a2ab0e44b5d7c14a53e4b4d25a2047c0d} 
+Last\+Completed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fastest@{Fastest}!StatsSceneScript@{StatsSceneScript}}\index{StatsSceneScript@{StatsSceneScript}!Fastest@{Fastest}}}\Hypertarget{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360a90fd7fdf6f41406a75e5265b9583bb4e}\label{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360a90fd7fdf6f41406a75e5265b9583bb4e} 
+Fastest&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Slowest@{Slowest}!StatsSceneScript@{StatsSceneScript}}\index{StatsSceneScript@{StatsSceneScript}!Slowest@{Slowest}}}\Hypertarget{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360a53ad658aa3b68ee6f8ac34262f27efc5}\label{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360a53ad658aa3b68ee6f8ac34262f27efc5} 
+Slowest&\\
+\hline
+
+\end{DoxyEnumFields}
+
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_stats_scene_script_a9320d3bc1f20900f3dc09ba1d397696a}\index{StatsSceneScript@{StatsSceneScript}!BackToMainMenu@{BackToMainMenu}}
@@ -130,6 +175,26 @@ Unity Start method.
 Initializes the file path for the JSON file and calls the Load\+Stats method to read and display player statistics. 
 
 \doxysubsection{Member Data Documentation}
+\Hypertarget{class_stats_scene_script_aca9a15a2f2fe86e94362d72568a48375}\index{StatsSceneScript@{StatsSceneScript}!contentParent@{contentParent}}
+\index{contentParent@{contentParent}!StatsSceneScript@{StatsSceneScript}}
+\doxysubsubsection{\texorpdfstring{contentParent}{contentParent}}
+{\footnotesize\ttfamily \label{class_stats_scene_script_aca9a15a2f2fe86e94362d72568a48375} 
+Transform Stats\+Scene\+Script.\+content\+Parent}
+
+
+
+the transform value of the content parent 
+
+\Hypertarget{class_stats_scene_script_a37af2d2c97836290e7473bbafbad047e}\index{StatsSceneScript@{StatsSceneScript}!currentSortMode@{currentSortMode}}
+\index{currentSortMode@{currentSortMode}!StatsSceneScript@{StatsSceneScript}}
+\doxysubsubsection{\texorpdfstring{currentSortMode}{currentSortMode}}
+{\footnotesize\ttfamily \label{class_stats_scene_script_a37af2d2c97836290e7473bbafbad047e} 
+\mbox{\hyperlink{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360}{Sort\+Mode}} Stats\+Scene\+Script.\+current\+Sort\+Mode = \mbox{\hyperlink{class_stats_scene_script_ad1a80b9330765dcfd101af5db55d9360a2ab0e44b5d7c14a53e4b4d25a2047c0d}{Sort\+Mode.\+Last\+Completed}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current sort mode. 
+
 \Hypertarget{class_stats_scene_script_ab04187483b36003eed72f58987c875be}\index{StatsSceneScript@{StatsSceneScript}!filePath@{filePath}}
 \index{filePath@{filePath}!StatsSceneScript@{StatsSceneScript}}
 \doxysubsubsection{\texorpdfstring{filePath}{filePath}}
@@ -149,6 +214,36 @@ string Stats\+Scene\+Script.\+main\+Menu\+Scene}
 
 
 Name of the main menu scene to load. 
+
+\Hypertarget{class_stats_scene_script_a636556d28d6aaa596611250969f77555}\index{StatsSceneScript@{StatsSceneScript}!searchInput@{searchInput}}
+\index{searchInput@{searchInput}!StatsSceneScript@{StatsSceneScript}}
+\doxysubsubsection{\texorpdfstring{searchInput}{searchInput}}
+{\footnotesize\ttfamily \label{class_stats_scene_script_a636556d28d6aaa596611250969f77555} 
+Input\+Field Stats\+Scene\+Script.\+search\+Input}
+
+
+
+UI Input field for searching. 
+
+\Hypertarget{class_stats_scene_script_ad992db338a4fe3f3c2fcb7f8c7f17ee3}\index{StatsSceneScript@{StatsSceneScript}!sortDropdown@{sortDropdown}}
+\index{sortDropdown@{sortDropdown}!StatsSceneScript@{StatsSceneScript}}
+\doxysubsubsection{\texorpdfstring{sortDropdown}{sortDropdown}}
+{\footnotesize\ttfamily \label{class_stats_scene_script_ad992db338a4fe3f3c2fcb7f8c7f17ee3} 
+Dropdown Stats\+Scene\+Script.\+sort\+Dropdown}
+
+
+
+UI Dropdown element for sorting. 
+
+\Hypertarget{class_stats_scene_script_aaca0392bed5f0b13496e0ce08a0e18ad}\index{StatsSceneScript@{StatsSceneScript}!statEntryRowPrefab@{statEntryRowPrefab}}
+\index{statEntryRowPrefab@{statEntryRowPrefab}!StatsSceneScript@{StatsSceneScript}}
+\doxysubsubsection{\texorpdfstring{statEntryRowPrefab}{statEntryRowPrefab}}
+{\footnotesize\ttfamily \label{class_stats_scene_script_aaca0392bed5f0b13496e0ce08a0e18ad} 
+Game\+Object Stats\+Scene\+Script.\+stat\+Entry\+Row\+Prefab}
+
+
+
+a prefab of a stat entry row in the table 
 
 \Hypertarget{class_stats_scene_script_a6a66cd317683b49d0f4a964f7aab2b25}\index{StatsSceneScript@{StatsSceneScript}!statsText@{statsText}}
 \index{statsText@{statsText}!StatsSceneScript@{StatsSceneScript}}

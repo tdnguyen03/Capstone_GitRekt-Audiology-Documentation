@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['endscenescript_2ecs_0',['EndSceneScript.cs',['../_end_scene_script_8cs.html',1,'']]]
+  ['displaystats_2ecs_0',['DisplayStats.cs',['../_display_stats_8cs.html',1,'']]]
 ];

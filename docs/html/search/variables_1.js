@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['filepath_0',['filePath',['../class_stats_scene_script.html#ab04187483b36003eed72f58987c875be',1,'StatsSceneScript.filePath'],['../class_stats_manager.html#ae07f93659afb19600a1a1b006baeec3a',1,'StatsManager.filePath']]]
+  ['elapsedtime_0',['elapsedTime',['../class_clock_script.html#ac0e0d1f70c4a16d2fcfc3b564a1fd262',1,'ClockScript']]],
+  ['endgamescene_1',['endGameScene',['../class_clock_script.html#a27a2616aa383356ae166d7645f326e43',1,'ClockScript']]]
 ];

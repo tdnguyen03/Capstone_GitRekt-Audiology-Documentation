@@ -1,0 +1,213 @@
+\doxysection{Clock\+Script Class Reference}
+\hypertarget{class_clock_script}{}\label{class_clock_script}\index{ClockScript@{ClockScript}}
+Inheritance diagram for Clock\+Script\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_clock_script}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_clock_script_a6aa868dc37a3f21d0ce91f899fcfd8e3}{Start\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Start Game method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clock_script_a47de8b3ef01b58b9e738964720367961}{Reset\+Button}} ()
+\begin{DoxyCompactList}\small\item\em Button to restart the scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clock_script_a63346ea225157545ffd587a4d288d69b}{Start\+Clock}} ()
+\begin{DoxyCompactList}\small\item\em Start clock method. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_clock_script_a34e4fdd92eeda3b52d7b997fb59fd66e}{Is\+Clock\+Running}} ()
+\begin{DoxyCompactList}\small\item\em Check method for if the clock is running. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_clock_script_a5344b902e8a9473a9bf5e7da4b2c7b05}{Get\+Elapsed\+Time}} ()
+\begin{DoxyCompactList}\small\item\em get the time elapsed in the simulation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clock_script_ad71c7e78020e69a1e736b69c35ebe147}{Exit\+Simulation}} ()
+\begin{DoxyCompactList}\small\item\em Exit the simulation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clock_script_ab74e773358a8fb05f229c4266e44811f}{Pause\+Clock}} ()
+\begin{DoxyCompactList}\small\item\em Pause clock method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_clock_script_a27a2616aa383356ae166d7645f326e43}{end\+Game\+Scene}}
+\begin{DoxyCompactList}\small\item\em name of the end game scene for scene transfer \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_clock_script_aaef28b42e062f0e532ac2db55704e4ba}{start\+Game\+Scene}}
+\begin{DoxyCompactList}\small\item\em name of the start game scene for scene transfer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_clock_script_a29a8f0df3f1e45d8ccdd6cb9aadb1170}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_clock_script_a07263384feed3afa18e98c9f72e9d50a}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Unity Update method for the clock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_clock_script_a444f5731e1c91a1266c149c29e14c66e}{timer\+Text}}
+\begin{DoxyCompactList}\small\item\em text mesh pro element of the timer \end{DoxyCompactList}\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_clock_script_aadf73d75f748de4250713fdf04dbfa3b}{pause\+Text}}
+\begin{DoxyCompactList}\small\item\em text mesh pro element of the pause\+Text \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_clock_script_ac0e0d1f70c4a16d2fcfc3b564a1fd262}{elapsed\+Time}}
+\begin{DoxyCompactList}\small\item\em variable for the time elapsed in the simulation while the clock is running \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_clock_script_a288ea765ef8704203b7de12f539145bd}{is\+Running}} = false
+\begin{DoxyCompactList}\small\item\em boolean to keep track of run state \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_clock_script_ad71c7e78020e69a1e736b69c35ebe147}\index{ClockScript@{ClockScript}!ExitSimulation@{ExitSimulation}}
+\index{ExitSimulation@{ExitSimulation}!ClockScript@{ClockScript}}
+\doxysubsubsection{\texorpdfstring{ExitSimulation()}{ExitSimulation()}}
+{\footnotesize\ttfamily \label{class_clock_script_ad71c7e78020e69a1e736b69c35ebe147} 
+void Clock\+Script.\+Exit\+Simulation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Exit the simulation. 
+
+pauses the game, saves the stats, moves on to the end game scene \Hypertarget{class_clock_script_a5344b902e8a9473a9bf5e7da4b2c7b05}\index{ClockScript@{ClockScript}!GetElapsedTime@{GetElapsedTime}}
+\index{GetElapsedTime@{GetElapsedTime}!ClockScript@{ClockScript}}
+\doxysubsubsection{\texorpdfstring{GetElapsedTime()}{GetElapsedTime()}}
+{\footnotesize\ttfamily \label{class_clock_script_a5344b902e8a9473a9bf5e7da4b2c7b05} 
+float Clock\+Script.\+Get\+Elapsed\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+get the time elapsed in the simulation 
+
+returns the elapsed time \begin{DoxyReturn}{Returns}
+elapsed\+Time elapsed time 
+\end{DoxyReturn}
+\Hypertarget{class_clock_script_a34e4fdd92eeda3b52d7b997fb59fd66e}\index{ClockScript@{ClockScript}!IsClockRunning@{IsClockRunning}}
+\index{IsClockRunning@{IsClockRunning}!ClockScript@{ClockScript}}
+\doxysubsubsection{\texorpdfstring{IsClockRunning()}{IsClockRunning()}}
+{\footnotesize\ttfamily \label{class_clock_script_a34e4fdd92eeda3b52d7b997fb59fd66e} 
+bool Clock\+Script.\+Is\+Clock\+Running (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Check method for if the clock is running. 
+
+returns the run status \begin{DoxyReturn}{Returns}
+is\+Running run status 
+\end{DoxyReturn}
+\Hypertarget{class_clock_script_ab74e773358a8fb05f229c4266e44811f}\index{ClockScript@{ClockScript}!PauseClock@{PauseClock}}
+\index{PauseClock@{PauseClock}!ClockScript@{ClockScript}}
+\doxysubsubsection{\texorpdfstring{PauseClock()}{PauseClock()}}
+{\footnotesize\ttfamily \label{class_clock_script_ab74e773358a8fb05f229c4266e44811f} 
+void Clock\+Script.\+Pause\+Clock (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Pause clock method. 
+
+if paused run program and let the user pause, if program is running pause and let the user resume \Hypertarget{class_clock_script_a47de8b3ef01b58b9e738964720367961}\index{ClockScript@{ClockScript}!ResetButton@{ResetButton}}
+\index{ResetButton@{ResetButton}!ClockScript@{ClockScript}}
+\doxysubsubsection{\texorpdfstring{ResetButton()}{ResetButton()}}
+{\footnotesize\ttfamily \label{class_clock_script_a47de8b3ef01b58b9e738964720367961} 
+void Clock\+Script.\+Reset\+Button (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Button to restart the scene. 
+
+Resets current scene and timescale \Hypertarget{class_clock_script_a29a8f0df3f1e45d8ccdd6cb9aadb1170}\index{ClockScript@{ClockScript}!Start@{Start}}
+\index{Start@{Start}!ClockScript@{ClockScript}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_clock_script_a29a8f0df3f1e45d8ccdd6cb9aadb1170} 
+void Clock\+Script.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_clock_script_a63346ea225157545ffd587a4d288d69b}\index{ClockScript@{ClockScript}!StartClock@{StartClock}}
+\index{StartClock@{StartClock}!ClockScript@{ClockScript}}
+\doxysubsubsection{\texorpdfstring{StartClock()}{StartClock()}}
+{\footnotesize\ttfamily \label{class_clock_script_a63346ea225157545ffd587a4d288d69b} 
+void Clock\+Script.\+Start\+Clock (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Start clock method. 
+
+sets the running variable to true so that the game can run \Hypertarget{class_clock_script_a6aa868dc37a3f21d0ce91f899fcfd8e3}\index{ClockScript@{ClockScript}!StartGame@{StartGame}}
+\index{StartGame@{StartGame}!ClockScript@{ClockScript}}
+\doxysubsubsection{\texorpdfstring{StartGame()}{StartGame()}}
+{\footnotesize\ttfamily \label{class_clock_script_a6aa868dc37a3f21d0ce91f899fcfd8e3} 
+void Clock\+Script.\+Start\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Start Game method. 
+
+loads the start game scene \Hypertarget{class_clock_script_a07263384feed3afa18e98c9f72e9d50a}\index{ClockScript@{ClockScript}!Update@{Update}}
+\index{Update@{Update}!ClockScript@{ClockScript}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_clock_script_a07263384feed3afa18e98c9f72e9d50a} 
+void Clock\+Script.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity Update method for the clock. 
+
+While the program is running keep track of the time in the stats manager and let the user be able to pause 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_clock_script_ac0e0d1f70c4a16d2fcfc3b564a1fd262}\index{ClockScript@{ClockScript}!elapsedTime@{elapsedTime}}
+\index{elapsedTime@{elapsedTime}!ClockScript@{ClockScript}}
+\doxysubsubsection{\texorpdfstring{elapsedTime}{elapsedTime}}
+{\footnotesize\ttfamily \label{class_clock_script_ac0e0d1f70c4a16d2fcfc3b564a1fd262} 
+float Clock\+Script.\+elapsed\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+variable for the time elapsed in the simulation while the clock is running 
+
+\Hypertarget{class_clock_script_a27a2616aa383356ae166d7645f326e43}\index{ClockScript@{ClockScript}!endGameScene@{endGameScene}}
+\index{endGameScene@{endGameScene}!ClockScript@{ClockScript}}
+\doxysubsubsection{\texorpdfstring{endGameScene}{endGameScene}}
+{\footnotesize\ttfamily \label{class_clock_script_a27a2616aa383356ae166d7645f326e43} 
+string Clock\+Script.\+end\+Game\+Scene}
+
+
+
+name of the end game scene for scene transfer 
+
+\Hypertarget{class_clock_script_a288ea765ef8704203b7de12f539145bd}\index{ClockScript@{ClockScript}!isRunning@{isRunning}}
+\index{isRunning@{isRunning}!ClockScript@{ClockScript}}
+\doxysubsubsection{\texorpdfstring{isRunning}{isRunning}}
+{\footnotesize\ttfamily \label{class_clock_script_a288ea765ef8704203b7de12f539145bd} 
+bool Clock\+Script.\+is\+Running = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+boolean to keep track of run state 
+
+\Hypertarget{class_clock_script_aadf73d75f748de4250713fdf04dbfa3b}\index{ClockScript@{ClockScript}!pauseText@{pauseText}}
+\index{pauseText@{pauseText}!ClockScript@{ClockScript}}
+\doxysubsubsection{\texorpdfstring{pauseText}{pauseText}}
+{\footnotesize\ttfamily \label{class_clock_script_aadf73d75f748de4250713fdf04dbfa3b} 
+TMP\+\_\+\+Text Clock\+Script.\+pause\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+text mesh pro element of the pause\+Text 
+
+\Hypertarget{class_clock_script_aaef28b42e062f0e532ac2db55704e4ba}\index{ClockScript@{ClockScript}!startGameScene@{startGameScene}}
+\index{startGameScene@{startGameScene}!ClockScript@{ClockScript}}
+\doxysubsubsection{\texorpdfstring{startGameScene}{startGameScene}}
+{\footnotesize\ttfamily \label{class_clock_script_aaef28b42e062f0e532ac2db55704e4ba} 
+string Clock\+Script.\+start\+Game\+Scene}
+
+
+
+name of the start game scene for scene transfer 
+
+\Hypertarget{class_clock_script_a444f5731e1c91a1266c149c29e14c66e}\index{ClockScript@{ClockScript}!timerText@{timerText}}
+\index{timerText@{timerText}!ClockScript@{ClockScript}}
+\doxysubsubsection{\texorpdfstring{timerText}{timerText}}
+{\footnotesize\ttfamily \label{class_clock_script_a444f5731e1c91a1266c149c29e14c66e} 
+TMP\+\_\+\+Text Clock\+Script.\+timer\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+text mesh pro element of the timer 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_clock_script_8cs}{Clock\+Script.\+cs}}\end{DoxyCompactItemize}
