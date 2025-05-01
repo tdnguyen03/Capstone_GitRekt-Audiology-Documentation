@@ -29,7 +29,7 @@ public class VRUserNameInputScript : MonoBehaviour
     [SerializeField] GameObject keyboardUI;
 
     /**
-     * @brief timer gmae object
+     * @brief timer game object
     */
     [SerializeField] GameObject timerUI;
 
