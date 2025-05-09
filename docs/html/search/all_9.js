@@ -1,6 +1,11 @@
 var searchData=
 [
-  ['keyboardscript_0',['KeyboardScript',['../class_keyboard_script.html',1,'']]],
-  ['keyboardscript_2ecs_1',['KeyboardScript.cs',['../_keyboard_script_8cs.html',1,'']]],
-  ['keyboardui_2',['keyboardUI',['../class_v_r_user_name_input_script.html#a39ea27fd16d63ddecc3c484483aa828c',1,'VRUserNameInputScript']]]
+  ['initialscale_0',['initialScale',['../class_moving_sphere.html#a75ab86a7aba18c39b6425aa1a0d1be89',1,'MovingSphere']]],
+  ['inputfield_1',['inputField',['../class_keyboard_script.html#ad1420d916e2700eaa58a5691baa3e9f6',1,'KeyboardScript.inputField'],['../class_v_r_user_name_input_script.html#a752dc5881f87c953b77a628482b16ebb',1,'VRUserNameInputScript.inputField']]],
+  ['instance_2',['Instance',['../class_danger_overlay_u_i.html#a94f27b6a801d0359849af7fe908394a3',1,'DangerOverlayUI']]],
+  ['introtext_3',['introText',['../class_end_scene_script.html#ab9e282a99e14393f79727bddb7b88c13',1,'EndSceneScript']]],
+  ['inverse3_4',['inverse3',['../class_haptic_manager.html#a3f5dd8f1908ea1184bd1e259b288d2c7',1,'HapticManager']]],
+  ['isclockrunning_5',['IsClockRunning',['../class_clock_script.html#a34e4fdd92eeda3b52d7b997fb59fd66e',1,'ClockScript']]],
+  ['isrunning_6',['isRunning',['../class_clock_script.html#a288ea765ef8704203b7de12f539145bd',1,'ClockScript']]],
+  ['istouchingcube_7',['isTouchingCube',['../class_curette_haptic_trigger.html#a37daae1250cd26a51e90f67a534943c9',1,'CuretteHapticTrigger']]]
 ];

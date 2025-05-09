@@ -1,0 +1,189 @@
+\doxysection{Curette\+Haptic\+Trigger Class Reference}
+\hypertarget{class_curette_haptic_trigger}{}\label{class_curette_haptic_trigger}\index{CuretteHapticTrigger@{CuretteHapticTrigger}}
+
+
+Handles haptic feedback for the curette tool.  
+
+
+Inheritance diagram for Curette\+Haptic\+Trigger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_curette_haptic_trigger}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \mbox{\hyperlink{class_curette_haptic_trigger_ab57d35586c49c7e879b3a5cbe33d0739}{Calculate\+Force}} (Vector3 cursor\+Position, Vector3 cursor\+Velocity, float cursor\+Radius)
+\begin{DoxyCompactList}\small\item\em Calculates the haptic feedback force. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_curette_haptic_trigger_a51dc7a31e9ab41f55fbd80c27a3aa30a}{vibration\+Amplitude}} = 2f
+\begin{DoxyCompactList}\small\item\em Amplitude of the vibration for haptic feedback. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_curette_haptic_trigger_a9c2535cdca5519eb4f3a348b339d28de}{vibration\+Frequency}} = 50f
+\begin{DoxyCompactList}\small\item\em Frequency of the vibration for haptic feedback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_curette_haptic_trigger_a37daae1250cd26a51e90f67a534943c9}{is\+Touching\+Cube}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates whether the curette is currently touching a cube. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_curette_haptic_trigger_a4b5f1c92e5c3da93fe97761cbd93a4fb}{last\+Collision\+Normal}} = Vector3.\+up\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The normal vector of the last collision point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_curette_haptic_trigger_ac486228be75a1d72c57e25c3253f5001}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Unity Awake method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curette_haptic_trigger_afe9ad83f3f66c4a281858e1d285f6703}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Unity Update method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curette_haptic_trigger_ac521e89fcf3eed290a41d94044789096}{On\+Trigger\+Enter}} (Collider other)
+\begin{DoxyCompactList}\small\item\em Unity On\+Trigger\+Enter method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curette_haptic_trigger_a621727e3205d5f975e036f7855360aab}{On\+Trigger\+Exit}} (Collider other)
+\begin{DoxyCompactList}\small\item\em Unity On\+Trigger\+Exit method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_curette_haptic_trigger_adef2a77f10ea1b063b49f49ae6060ae6}{local\+Time}} = 0f
+\begin{DoxyCompactList}\small\item\em Local timer used for vibration calculations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles haptic feedback for the curette tool. 
+
+This class detects collisions between the curette and cubes, calculates haptic feedback forces, and manages vibration settings. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_curette_haptic_trigger_ac486228be75a1d72c57e25c3253f5001}\index{CuretteHapticTrigger@{CuretteHapticTrigger}!Awake@{Awake}}
+\index{Awake@{Awake}!CuretteHapticTrigger@{CuretteHapticTrigger}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_curette_haptic_trigger_ac486228be75a1d72c57e25c3253f5001} 
+void Curette\+Haptic\+Trigger.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity Awake method. 
+
+Registers the curette trigger with the \doxylink{class_haptic_manager}{Haptic\+Manager}. \Hypertarget{class_curette_haptic_trigger_ab57d35586c49c7e879b3a5cbe33d0739}\index{CuretteHapticTrigger@{CuretteHapticTrigger}!CalculateForce@{CalculateForce}}
+\index{CalculateForce@{CalculateForce}!CuretteHapticTrigger@{CuretteHapticTrigger}}
+\doxysubsubsection{\texorpdfstring{CalculateForce()}{CalculateForce()}}
+{\footnotesize\ttfamily \label{class_curette_haptic_trigger_ab57d35586c49c7e879b3a5cbe33d0739} 
+Vector3 Curette\+Haptic\+Trigger.\+Calculate\+Force (\begin{DoxyParamCaption}\item[{Vector3}]{cursor\+Position}{, }\item[{Vector3}]{cursor\+Velocity}{, }\item[{float}]{cursor\+Radius}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the haptic feedback force. 
+
+Computes the vibration force based on the collision state, vibration settings, and the last collision normal. 
+\begin{DoxyParams}{Parameters}
+{\em cursor\+Position} & The position of the cursor in world space. \\
+\hline
+{\em cursor\+Velocity} & The velocity of the cursor. \\
+\hline
+{\em cursor\+Radius} & The radius of the cursor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector representing the calculated haptic feedback force. 
+\end{DoxyReturn}
+\Hypertarget{class_curette_haptic_trigger_ac521e89fcf3eed290a41d94044789096}\index{CuretteHapticTrigger@{CuretteHapticTrigger}!OnTriggerEnter@{OnTriggerEnter}}
+\index{OnTriggerEnter@{OnTriggerEnter}!CuretteHapticTrigger@{CuretteHapticTrigger}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter()}{OnTriggerEnter()}}
+{\footnotesize\ttfamily \label{class_curette_haptic_trigger_ac521e89fcf3eed290a41d94044789096} 
+void Curette\+Haptic\+Trigger.\+On\+Trigger\+Enter (\begin{DoxyParamCaption}\item[{Collider}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity On\+Trigger\+Enter method. 
+
+Detects when the curette enters a collision with a cube and updates the collision state and normal vector. 
+\begin{DoxyParams}{Parameters}
+{\em other} & The collider of the object that triggered the collision. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_curette_haptic_trigger_a621727e3205d5f975e036f7855360aab}\index{CuretteHapticTrigger@{CuretteHapticTrigger}!OnTriggerExit@{OnTriggerExit}}
+\index{OnTriggerExit@{OnTriggerExit}!CuretteHapticTrigger@{CuretteHapticTrigger}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit()}{OnTriggerExit()}}
+{\footnotesize\ttfamily \label{class_curette_haptic_trigger_a621727e3205d5f975e036f7855360aab} 
+void Curette\+Haptic\+Trigger.\+On\+Trigger\+Exit (\begin{DoxyParamCaption}\item[{Collider}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity On\+Trigger\+Exit method. 
+
+Detects when the curette exits a collision with a cube and resets the collision state and normal vector. 
+\begin{DoxyParams}{Parameters}
+{\em other} & The collider of the object that triggered the collision exit. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_curette_haptic_trigger_afe9ad83f3f66c4a281858e1d285f6703}\index{CuretteHapticTrigger@{CuretteHapticTrigger}!Update@{Update}}
+\index{Update@{Update}!CuretteHapticTrigger@{CuretteHapticTrigger}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_curette_haptic_trigger_afe9ad83f3f66c4a281858e1d285f6703} 
+void Curette\+Haptic\+Trigger.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity Update method. 
+
+Updates the local timer used for vibration calculations. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_curette_haptic_trigger_adef2a77f10ea1b063b49f49ae6060ae6}\index{CuretteHapticTrigger@{CuretteHapticTrigger}!localTime@{localTime}}
+\index{localTime@{localTime}!CuretteHapticTrigger@{CuretteHapticTrigger}}
+\doxysubsubsection{\texorpdfstring{localTime}{localTime}}
+{\footnotesize\ttfamily \label{class_curette_haptic_trigger_adef2a77f10ea1b063b49f49ae6060ae6} 
+float Curette\+Haptic\+Trigger.\+local\+Time = 0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Local timer used for vibration calculations. 
+
+\Hypertarget{class_curette_haptic_trigger_a51dc7a31e9ab41f55fbd80c27a3aa30a}\index{CuretteHapticTrigger@{CuretteHapticTrigger}!vibrationAmplitude@{vibrationAmplitude}}
+\index{vibrationAmplitude@{vibrationAmplitude}!CuretteHapticTrigger@{CuretteHapticTrigger}}
+\doxysubsubsection{\texorpdfstring{vibrationAmplitude}{vibrationAmplitude}}
+{\footnotesize\ttfamily \label{class_curette_haptic_trigger_a51dc7a31e9ab41f55fbd80c27a3aa30a} 
+float Curette\+Haptic\+Trigger.\+vibration\+Amplitude = 2f}
+
+
+
+Amplitude of the vibration for haptic feedback. 
+
+\Hypertarget{class_curette_haptic_trigger_a9c2535cdca5519eb4f3a348b339d28de}\index{CuretteHapticTrigger@{CuretteHapticTrigger}!vibrationFrequency@{vibrationFrequency}}
+\index{vibrationFrequency@{vibrationFrequency}!CuretteHapticTrigger@{CuretteHapticTrigger}}
+\doxysubsubsection{\texorpdfstring{vibrationFrequency}{vibrationFrequency}}
+{\footnotesize\ttfamily \label{class_curette_haptic_trigger_a9c2535cdca5519eb4f3a348b339d28de} 
+float Curette\+Haptic\+Trigger.\+vibration\+Frequency = 50f}
+
+
+
+Frequency of the vibration for haptic feedback. 
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_curette_haptic_trigger_a37daae1250cd26a51e90f67a534943c9}\index{CuretteHapticTrigger@{CuretteHapticTrigger}!isTouchingCube@{isTouchingCube}}
+\index{isTouchingCube@{isTouchingCube}!CuretteHapticTrigger@{CuretteHapticTrigger}}
+\doxysubsubsection{\texorpdfstring{isTouchingCube}{isTouchingCube}}
+{\footnotesize\ttfamily \label{class_curette_haptic_trigger_a37daae1250cd26a51e90f67a534943c9} 
+bool Curette\+Haptic\+Trigger.\+is\+Touching\+Cube = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+Indicates whether the curette is currently touching a cube. 
+
+\Hypertarget{class_curette_haptic_trigger_a4b5f1c92e5c3da93fe97761cbd93a4fb}\index{CuretteHapticTrigger@{CuretteHapticTrigger}!lastCollisionNormal@{lastCollisionNormal}}
+\index{lastCollisionNormal@{lastCollisionNormal}!CuretteHapticTrigger@{CuretteHapticTrigger}}
+\doxysubsubsection{\texorpdfstring{lastCollisionNormal}{lastCollisionNormal}}
+{\footnotesize\ttfamily \label{class_curette_haptic_trigger_a4b5f1c92e5c3da93fe97761cbd93a4fb} 
+Vector3 Curette\+Haptic\+Trigger.\+last\+Collision\+Normal = Vector3.\+up\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+The normal vector of the last collision point. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_curette_haptic_trigger_8cs}{Curette\+Haptic\+Trigger.\+cs}}\end{DoxyCompactItemize}

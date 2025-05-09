@@ -1,0 +1,224 @@
+\doxysection{Cube\+Force\+Feedback Class Reference}
+\hypertarget{class_cube_force_feedback}{}\label{class_cube_force_feedback}\index{CubeForceFeedback@{CubeForceFeedback}}
+
+
+Provides force feedback for a cube object.  
+
+
+Inheritance diagram for Cube\+Force\+Feedback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cube_force_feedback}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \mbox{\hyperlink{class_cube_force_feedback_a9b367546b95b71d514e8c8c26ec5d8fb}{Calculate\+Force}} (Vector3 cursor\+Position, Vector3 cursor\+Velocity, float cursor\+Radius)
+\begin{DoxyCompactList}\small\item\em Calculates the force feedback based on cursor interaction. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_cube_force_feedback_a77f36d7ef69d89873b9678e598c0c0b1}{Normalized\+Penetration}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the normalized penetration depth. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_cube_force_feedback_ab2a169fc54176edbc879ad0db6bd2fa7}{stiffness}} = 300f
+\begin{DoxyCompactList}\small\item\em Stiffness of the cube for force feedback calculations. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_cube_force_feedback_a45c98923e3c8f28d2f2515b3e2f5a20d}{damping}} = 1f
+\begin{DoxyCompactList}\small\item\em Damping factor for force feedback calculations. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_cube_force_feedback_a03bfbc09b72e7da33a7b94110a50b639}{warning\+Message}}
+\begin{DoxyCompactList}\small\item\em Warning message to display when needed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cube_force_feedback_a708078085f46e25dc257b5de391bd520}{enable\+Color\+Feedback}} = false
+\begin{DoxyCompactList}\small\item\em Enables or disables color feedback based on penetration depth. \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{class_cube_force_feedback_a15e42931a26b4ca8d0f59754510cf26f}{min\+Force\+Color}} = Color.\+white
+\begin{DoxyCompactList}\small\item\em Color of the cube when no force is applied. \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{class_cube_force_feedback_aeb5b10b0927656ce4e529a1b66111b57}{max\+Force\+Color}} = Color.\+red
+\begin{DoxyCompactList}\small\item\em Color of the cube when maximum force is applied. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_cube_force_feedback_a5330cd9b45cc3b81b119c49ec4612be0}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Unity Awake method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube_force_feedback_a83467ec8497096526de109a2d75d65d8}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Unity Update method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \mbox{\hyperlink{class_cube_force_feedback_ab76d9be488e47278e7653597c5f22832}{\+\_\+cube\+Position}}
+\begin{DoxyCompactList}\small\item\em Position of the cube in world space. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_cube_force_feedback_a23ab8dd7a272838491bd999090e3c0e6}{\+\_\+cube\+Size}}
+\begin{DoxyCompactList}\small\item\em Size of the cube in world space. \end{DoxyCompactList}\item 
+Renderer \mbox{\hyperlink{class_cube_force_feedback_adbf52ddec71e699e4bccbb73e5b528a5}{\+\_\+renderer}}
+\begin{DoxyCompactList}\small\item\em Renderer component of the cube for visual feedback. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_cube_force_feedback_aad6446f88ebefd4efdb2ca6adacb1c86}{\+\_\+penetration}} = 0f
+\begin{DoxyCompactList}\small\item\em Penetration depth of the cursor into the cube. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides force feedback for a cube object. 
+
+This class calculates the force feedback based on the cursor\textquotesingle{}s position, velocity, and radius. It also provides visual feedback by changing the cube\textquotesingle{}s color based on the penetration depth. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cube_force_feedback_a5330cd9b45cc3b81b119c49ec4612be0}\index{CubeForceFeedback@{CubeForceFeedback}!Awake@{Awake}}
+\index{Awake@{Awake}!CubeForceFeedback@{CubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_cube_force_feedback_a5330cd9b45cc3b81b119c49ec4612be0} 
+void Cube\+Force\+Feedback.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity Awake method. 
+
+Initializes the cube\textquotesingle{}s position, size, and renderer. Registers the cube with the \doxylink{class_haptic_manager}{Haptic\+Manager}. \Hypertarget{class_cube_force_feedback_a9b367546b95b71d514e8c8c26ec5d8fb}\index{CubeForceFeedback@{CubeForceFeedback}!CalculateForce@{CalculateForce}}
+\index{CalculateForce@{CalculateForce}!CubeForceFeedback@{CubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{CalculateForce()}{CalculateForce()}}
+{\footnotesize\ttfamily \label{class_cube_force_feedback_a9b367546b95b71d514e8c8c26ec5d8fb} 
+Vector3 Cube\+Force\+Feedback.\+Calculate\+Force (\begin{DoxyParamCaption}\item[{Vector3}]{cursor\+Position}{, }\item[{Vector3}]{cursor\+Velocity}{, }\item[{float}]{cursor\+Radius}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the force feedback based on cursor interaction. 
+
+Determines the force applied to the cursor based on its position, velocity, and radius relative to the cube. 
+\begin{DoxyParams}{Parameters}
+{\em cursor\+Position} & The position of the cursor in world space. \\
+\hline
+{\em cursor\+Velocity} & The velocity of the cursor. \\
+\hline
+{\em cursor\+Radius} & The radius of the cursor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector representing the calculated force. 
+\end{DoxyReturn}
+\Hypertarget{class_cube_force_feedback_a77f36d7ef69d89873b9678e598c0c0b1}\index{CubeForceFeedback@{CubeForceFeedback}!NormalizedPenetration@{NormalizedPenetration}}
+\index{NormalizedPenetration@{NormalizedPenetration}!CubeForceFeedback@{CubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{NormalizedPenetration()}{NormalizedPenetration()}}
+{\footnotesize\ttfamily \label{class_cube_force_feedback_a77f36d7ef69d89873b9678e598c0c0b1} 
+float Cube\+Force\+Feedback.\+Normalized\+Penetration (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the normalized penetration depth. 
+
+Normalizes the penetration depth to a value between 0 and 1. \begin{DoxyReturn}{Returns}
+A float representing the normalized penetration depth. 
+\end{DoxyReturn}
+\Hypertarget{class_cube_force_feedback_a83467ec8497096526de109a2d75d65d8}\index{CubeForceFeedback@{CubeForceFeedback}!Update@{Update}}
+\index{Update@{Update}!CubeForceFeedback@{CubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_cube_force_feedback_a83467ec8497096526de109a2d75d65d8} 
+void Cube\+Force\+Feedback.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity Update method. 
+
+Updates the cube\textquotesingle{}s color based on the penetration depth if color feedback is enabled. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_cube_force_feedback_ab76d9be488e47278e7653597c5f22832}\index{CubeForceFeedback@{CubeForceFeedback}!\_cubePosition@{\_cubePosition}}
+\index{\_cubePosition@{\_cubePosition}!CubeForceFeedback@{CubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{\_cubePosition}{\_cubePosition}}
+{\footnotesize\ttfamily \label{class_cube_force_feedback_ab76d9be488e47278e7653597c5f22832} 
+Vector3 Cube\+Force\+Feedback.\+\_\+cube\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Position of the cube in world space. 
+
+\Hypertarget{class_cube_force_feedback_a23ab8dd7a272838491bd999090e3c0e6}\index{CubeForceFeedback@{CubeForceFeedback}!\_cubeSize@{\_cubeSize}}
+\index{\_cubeSize@{\_cubeSize}!CubeForceFeedback@{CubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{\_cubeSize}{\_cubeSize}}
+{\footnotesize\ttfamily \label{class_cube_force_feedback_a23ab8dd7a272838491bd999090e3c0e6} 
+Vector3 Cube\+Force\+Feedback.\+\_\+cube\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Size of the cube in world space. 
+
+\Hypertarget{class_cube_force_feedback_aad6446f88ebefd4efdb2ca6adacb1c86}\index{CubeForceFeedback@{CubeForceFeedback}!\_penetration@{\_penetration}}
+\index{\_penetration@{\_penetration}!CubeForceFeedback@{CubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{\_penetration}{\_penetration}}
+{\footnotesize\ttfamily \label{class_cube_force_feedback_aad6446f88ebefd4efdb2ca6adacb1c86} 
+float Cube\+Force\+Feedback.\+\_\+penetration = 0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Penetration depth of the cursor into the cube. 
+
+\Hypertarget{class_cube_force_feedback_adbf52ddec71e699e4bccbb73e5b528a5}\index{CubeForceFeedback@{CubeForceFeedback}!\_renderer@{\_renderer}}
+\index{\_renderer@{\_renderer}!CubeForceFeedback@{CubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{\_renderer}{\_renderer}}
+{\footnotesize\ttfamily \label{class_cube_force_feedback_adbf52ddec71e699e4bccbb73e5b528a5} 
+Renderer Cube\+Force\+Feedback.\+\_\+renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Renderer component of the cube for visual feedback. 
+
+\Hypertarget{class_cube_force_feedback_a45c98923e3c8f28d2f2515b3e2f5a20d}\index{CubeForceFeedback@{CubeForceFeedback}!damping@{damping}}
+\index{damping@{damping}!CubeForceFeedback@{CubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{damping}{damping}}
+{\footnotesize\ttfamily \label{class_cube_force_feedback_a45c98923e3c8f28d2f2515b3e2f5a20d} 
+float Cube\+Force\+Feedback.\+damping = 1f}
+
+
+
+Damping factor for force feedback calculations. 
+
+\Hypertarget{class_cube_force_feedback_a708078085f46e25dc257b5de391bd520}\index{CubeForceFeedback@{CubeForceFeedback}!enableColorFeedback@{enableColorFeedback}}
+\index{enableColorFeedback@{enableColorFeedback}!CubeForceFeedback@{CubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{enableColorFeedback}{enableColorFeedback}}
+{\footnotesize\ttfamily \label{class_cube_force_feedback_a708078085f46e25dc257b5de391bd520} 
+bool Cube\+Force\+Feedback.\+enable\+Color\+Feedback = false}
+
+
+
+Enables or disables color feedback based on penetration depth. 
+
+\Hypertarget{class_cube_force_feedback_aeb5b10b0927656ce4e529a1b66111b57}\index{CubeForceFeedback@{CubeForceFeedback}!maxForceColor@{maxForceColor}}
+\index{maxForceColor@{maxForceColor}!CubeForceFeedback@{CubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{maxForceColor}{maxForceColor}}
+{\footnotesize\ttfamily \label{class_cube_force_feedback_aeb5b10b0927656ce4e529a1b66111b57} 
+Color Cube\+Force\+Feedback.\+max\+Force\+Color = Color.\+red}
+
+
+
+Color of the cube when maximum force is applied. 
+
+\Hypertarget{class_cube_force_feedback_a15e42931a26b4ca8d0f59754510cf26f}\index{CubeForceFeedback@{CubeForceFeedback}!minForceColor@{minForceColor}}
+\index{minForceColor@{minForceColor}!CubeForceFeedback@{CubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{minForceColor}{minForceColor}}
+{\footnotesize\ttfamily \label{class_cube_force_feedback_a15e42931a26b4ca8d0f59754510cf26f} 
+Color Cube\+Force\+Feedback.\+min\+Force\+Color = Color.\+white}
+
+
+
+Color of the cube when no force is applied. 
+
+\Hypertarget{class_cube_force_feedback_ab2a169fc54176edbc879ad0db6bd2fa7}\index{CubeForceFeedback@{CubeForceFeedback}!stiffness@{stiffness}}
+\index{stiffness@{stiffness}!CubeForceFeedback@{CubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{stiffness}{stiffness}}
+{\footnotesize\ttfamily \label{class_cube_force_feedback_ab2a169fc54176edbc879ad0db6bd2fa7} 
+float Cube\+Force\+Feedback.\+stiffness = 300f}
+
+
+
+Stiffness of the cube for force feedback calculations. 
+
+\Hypertarget{class_cube_force_feedback_a03bfbc09b72e7da33a7b94110a50b639}\index{CubeForceFeedback@{CubeForceFeedback}!warningMessage@{warningMessage}}
+\index{warningMessage@{warningMessage}!CubeForceFeedback@{CubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{warningMessage}{warningMessage}}
+{\footnotesize\ttfamily \label{class_cube_force_feedback_a03bfbc09b72e7da33a7b94110a50b639} 
+string Cube\+Force\+Feedback.\+warning\+Message}
+
+
+
+Warning message to display when needed. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cube_force_feedback_8cs}{Cube\+Force\+Feedback.\+cs}}\end{DoxyCompactItemize}

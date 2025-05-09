@@ -1,0 +1,286 @@
+\doxysection{Moving\+Sphere Class Reference}
+\hypertarget{class_moving_sphere}{}\label{class_moving_sphere}\index{MovingSphere@{MovingSphere}}
+
+
+Represents a sphere that moves and interacts with haptic feedback systems.  
+
+
+Inheritance diagram for Moving\+Sphere\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_moving_sphere}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \mbox{\hyperlink{class_moving_sphere_a5bdd4ecfb0c6b91507f3195d4bd36b89}{Calculate\+Force}} (Vector3 cursor\+Pos, Vector3 cursor\+Vel, float cursor\+Radius)
+\begin{DoxyCompactList}\small\item\em Calculates the force to resist cursor penetration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_moving_sphere_ac7ccb42f710619afe401d2b7ad98e67a}{push\+Force}} = 0.\+01f
+\begin{DoxyCompactList}\small\item\em Force applied to push the sphere. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_moving_sphere_a22d31cdf906c46b22b75fe42fa6944a4}{stickiness}} = 30f
+\begin{DoxyCompactList}\small\item\em Stickiness factor for resisting movement. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_moving_sphere_a5aaa0d9ef2c17387ce5b44b14b653afa}{breakaway\+Force}} = 3f
+\begin{DoxyCompactList}\small\item\em Force required to break away from the stickiness. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_moving_sphere_adc2cf37f591e1098707392f6e7587c7a}{squish\+Amount}} = 0.\+2f
+\begin{DoxyCompactList}\small\item\em Amount of squish applied to the sphere. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_moving_sphere_ab2ce2c71180b6cd1237c7be8855871bd}{squish\+Speed}} = 5f
+\begin{DoxyCompactList}\small\item\em Speed at which the squish effect is applied. \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_moving_sphere_a7ac81b386dc9d14d451ceabc85a69aff}{visual\+Sphere}}
+\begin{DoxyCompactList}\small\item\em Transform representing the visual sphere for squish effects. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_curved_tube_force_feedback}{Curved\+Tube\+Force\+Feedback}} \mbox{\hyperlink{class_moving_sphere_ad4489aa8d59b3d1aa54508b8c5245607}{curved\+Tube}}
+\begin{DoxyCompactList}\small\item\em Reference to the curved tube for radial force calculations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_moving_sphere_a2a50cb2bbeef5744484155d410e974c4}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Unity Awake method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_moving_sphere_a0a3d60a6409cb232cf5764926d590a3d}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Unity Update method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_moving_sphere_a8380411a862c1bf5d49645aaac549c56}{Apply\+Squish}} (float factor)
+\begin{DoxyCompactList}\small\item\em Applies the squish effect to the visual sphere. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Rigidbody \mbox{\hyperlink{class_moving_sphere_afaf61b7fe9c9dd98006eacd4954c8109}{rb}}
+\begin{DoxyCompactList}\small\item\em Rigidbody component of the sphere. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_moving_sphere_a8046f9d16bf26c724727e2bbff264047}{sphere\+Radius}}
+\begin{DoxyCompactList}\small\item\em Radius of the sphere. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_moving_sphere_a4da2a2b2273dab3a0d7db00101eb5eec}{main\+Thread\+Position}}
+\begin{DoxyCompactList}\small\item\em Position of the sphere on the main thread. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_moving_sphere_a75ab86a7aba18c39b6425aa1a0d1be89}{initial\+Scale}}
+\begin{DoxyCompactList}\small\item\em Initial scale of the visual sphere. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_moving_sphere_a08358b7aba137e608b2a9ffa7a1941e6}{pending\+Force}} = Vector3.\+zero
+\begin{DoxyCompactList}\small\item\em Pending force to be applied to the sphere. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_moving_sphere_a2e57fc8e43d03a007f1aac2c627b15c2}{stuck}} = true
+\begin{DoxyCompactList}\small\item\em Indicates whether the sphere is stuck. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_moving_sphere_a8a216416e13e47c5f3395534f8fdaf39}{current\+Squish}} = 0f
+\begin{DoxyCompactList}\small\item\em Current squish factor of the sphere. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_moving_sphere_a44e0122529a0cde9365892ac4ed48467}{target\+Squish}} = 0f
+\begin{DoxyCompactList}\small\item\em Target squish factor of the sphere. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a sphere that moves and interacts with haptic feedback systems. 
+
+This class handles the movement, collision resistance, and visual squish effects of a sphere. It interacts with a spline tube and responds to haptic forces. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_moving_sphere_a8380411a862c1bf5d49645aaac549c56}\index{MovingSphere@{MovingSphere}!ApplySquish@{ApplySquish}}
+\index{ApplySquish@{ApplySquish}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{ApplySquish()}{ApplySquish()}}
+{\footnotesize\ttfamily \label{class_moving_sphere_a8380411a862c1bf5d49645aaac549c56} 
+void Moving\+Sphere.\+Apply\+Squish (\begin{DoxyParamCaption}\item[{float}]{factor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Applies the squish effect to the visual sphere. 
+
+Adjusts the scale of the visual sphere based on the squish factor. 
+\begin{DoxyParams}{Parameters}
+{\em factor} & The squish factor to apply. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_moving_sphere_a2a50cb2bbeef5744484155d410e974c4}\index{MovingSphere@{MovingSphere}!Awake@{Awake}}
+\index{Awake@{Awake}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_moving_sphere_a2a50cb2bbeef5744484155d410e974c4} 
+void Moving\+Sphere.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity Awake method. 
+
+Initializes the sphere\textquotesingle{}s components, registers it with the \doxylink{class_haptic_manager}{Haptic\+Manager}, and sets up references. \Hypertarget{class_moving_sphere_a5bdd4ecfb0c6b91507f3195d4bd36b89}\index{MovingSphere@{MovingSphere}!CalculateForce@{CalculateForce}}
+\index{CalculateForce@{CalculateForce}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{CalculateForce()}{CalculateForce()}}
+{\footnotesize\ttfamily \label{class_moving_sphere_a5bdd4ecfb0c6b91507f3195d4bd36b89} 
+Vector3 Moving\+Sphere.\+Calculate\+Force (\begin{DoxyParamCaption}\item[{Vector3}]{cursor\+Pos}{, }\item[{Vector3}]{cursor\+Vel}{, }\item[{float}]{cursor\+Radius}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the force to resist cursor penetration. 
+
+Computes the collision resistance and builds a pushing force based on the cursor\textquotesingle{}s position and velocity. 
+\begin{DoxyParams}{Parameters}
+{\em cursor\+Pos} & The position of the cursor in world space. \\
+\hline
+{\em cursor\+Vel} & The velocity of the cursor. \\
+\hline
+{\em cursor\+Radius} & The radius of the cursor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector representing the calculated force. 
+\end{DoxyReturn}
+\Hypertarget{class_moving_sphere_a0a3d60a6409cb232cf5764926d590a3d}\index{MovingSphere@{MovingSphere}!Update@{Update}}
+\index{Update@{Update}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_moving_sphere_a0a3d60a6409cb232cf5764926d590a3d} 
+void Moving\+Sphere.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity Update method. 
+
+Updates the sphere\textquotesingle{}s position, applies forces, and handles squish effects. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_moving_sphere_a5aaa0d9ef2c17387ce5b44b14b653afa}\index{MovingSphere@{MovingSphere}!breakawayForce@{breakawayForce}}
+\index{breakawayForce@{breakawayForce}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{breakawayForce}{breakawayForce}}
+{\footnotesize\ttfamily \label{class_moving_sphere_a5aaa0d9ef2c17387ce5b44b14b653afa} 
+float Moving\+Sphere.\+breakaway\+Force = 3f}
+
+
+
+Force required to break away from the stickiness. 
+
+\Hypertarget{class_moving_sphere_a8a216416e13e47c5f3395534f8fdaf39}\index{MovingSphere@{MovingSphere}!currentSquish@{currentSquish}}
+\index{currentSquish@{currentSquish}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{currentSquish}{currentSquish}}
+{\footnotesize\ttfamily \label{class_moving_sphere_a8a216416e13e47c5f3395534f8fdaf39} 
+float Moving\+Sphere.\+current\+Squish = 0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current squish factor of the sphere. 
+
+\Hypertarget{class_moving_sphere_ad4489aa8d59b3d1aa54508b8c5245607}\index{MovingSphere@{MovingSphere}!curvedTube@{curvedTube}}
+\index{curvedTube@{curvedTube}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{curvedTube}{curvedTube}}
+{\footnotesize\ttfamily \label{class_moving_sphere_ad4489aa8d59b3d1aa54508b8c5245607} 
+\mbox{\hyperlink{class_curved_tube_force_feedback}{Curved\+Tube\+Force\+Feedback}} Moving\+Sphere.\+curved\+Tube}
+
+
+
+Reference to the curved tube for radial force calculations. 
+
+\Hypertarget{class_moving_sphere_a75ab86a7aba18c39b6425aa1a0d1be89}\index{MovingSphere@{MovingSphere}!initialScale@{initialScale}}
+\index{initialScale@{initialScale}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{initialScale}{initialScale}}
+{\footnotesize\ttfamily \label{class_moving_sphere_a75ab86a7aba18c39b6425aa1a0d1be89} 
+Vector3 Moving\+Sphere.\+initial\+Scale\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initial scale of the visual sphere. 
+
+\Hypertarget{class_moving_sphere_a4da2a2b2273dab3a0d7db00101eb5eec}\index{MovingSphere@{MovingSphere}!mainThreadPosition@{mainThreadPosition}}
+\index{mainThreadPosition@{mainThreadPosition}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{mainThreadPosition}{mainThreadPosition}}
+{\footnotesize\ttfamily \label{class_moving_sphere_a4da2a2b2273dab3a0d7db00101eb5eec} 
+Vector3 Moving\+Sphere.\+main\+Thread\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Position of the sphere on the main thread. 
+
+\Hypertarget{class_moving_sphere_a08358b7aba137e608b2a9ffa7a1941e6}\index{MovingSphere@{MovingSphere}!pendingForce@{pendingForce}}
+\index{pendingForce@{pendingForce}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{pendingForce}{pendingForce}}
+{\footnotesize\ttfamily \label{class_moving_sphere_a08358b7aba137e608b2a9ffa7a1941e6} 
+Vector3 Moving\+Sphere.\+pending\+Force = Vector3.\+zero\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pending force to be applied to the sphere. 
+
+\Hypertarget{class_moving_sphere_ac7ccb42f710619afe401d2b7ad98e67a}\index{MovingSphere@{MovingSphere}!pushForce@{pushForce}}
+\index{pushForce@{pushForce}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{pushForce}{pushForce}}
+{\footnotesize\ttfamily \label{class_moving_sphere_ac7ccb42f710619afe401d2b7ad98e67a} 
+float Moving\+Sphere.\+push\+Force = 0.\+01f}
+
+
+
+Force applied to push the sphere. 
+
+\Hypertarget{class_moving_sphere_afaf61b7fe9c9dd98006eacd4954c8109}\index{MovingSphere@{MovingSphere}!rb@{rb}}
+\index{rb@{rb}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{rb}{rb}}
+{\footnotesize\ttfamily \label{class_moving_sphere_afaf61b7fe9c9dd98006eacd4954c8109} 
+Rigidbody Moving\+Sphere.\+rb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rigidbody component of the sphere. 
+
+\Hypertarget{class_moving_sphere_a8046f9d16bf26c724727e2bbff264047}\index{MovingSphere@{MovingSphere}!sphereRadius@{sphereRadius}}
+\index{sphereRadius@{sphereRadius}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{sphereRadius}{sphereRadius}}
+{\footnotesize\ttfamily \label{class_moving_sphere_a8046f9d16bf26c724727e2bbff264047} 
+float Moving\+Sphere.\+sphere\+Radius\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Radius of the sphere. 
+
+\Hypertarget{class_moving_sphere_adc2cf37f591e1098707392f6e7587c7a}\index{MovingSphere@{MovingSphere}!squishAmount@{squishAmount}}
+\index{squishAmount@{squishAmount}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{squishAmount}{squishAmount}}
+{\footnotesize\ttfamily \label{class_moving_sphere_adc2cf37f591e1098707392f6e7587c7a} 
+float Moving\+Sphere.\+squish\+Amount = 0.\+2f}
+
+
+
+Amount of squish applied to the sphere. 
+
+\Hypertarget{class_moving_sphere_ab2ce2c71180b6cd1237c7be8855871bd}\index{MovingSphere@{MovingSphere}!squishSpeed@{squishSpeed}}
+\index{squishSpeed@{squishSpeed}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{squishSpeed}{squishSpeed}}
+{\footnotesize\ttfamily \label{class_moving_sphere_ab2ce2c71180b6cd1237c7be8855871bd} 
+float Moving\+Sphere.\+squish\+Speed = 5f}
+
+
+
+Speed at which the squish effect is applied. 
+
+\Hypertarget{class_moving_sphere_a22d31cdf906c46b22b75fe42fa6944a4}\index{MovingSphere@{MovingSphere}!stickiness@{stickiness}}
+\index{stickiness@{stickiness}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{stickiness}{stickiness}}
+{\footnotesize\ttfamily \label{class_moving_sphere_a22d31cdf906c46b22b75fe42fa6944a4} 
+float Moving\+Sphere.\+stickiness = 30f}
+
+
+
+Stickiness factor for resisting movement. 
+
+\Hypertarget{class_moving_sphere_a2e57fc8e43d03a007f1aac2c627b15c2}\index{MovingSphere@{MovingSphere}!stuck@{stuck}}
+\index{stuck@{stuck}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{stuck}{stuck}}
+{\footnotesize\ttfamily \label{class_moving_sphere_a2e57fc8e43d03a007f1aac2c627b15c2} 
+bool Moving\+Sphere.\+stuck = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indicates whether the sphere is stuck. 
+
+\Hypertarget{class_moving_sphere_a44e0122529a0cde9365892ac4ed48467}\index{MovingSphere@{MovingSphere}!targetSquish@{targetSquish}}
+\index{targetSquish@{targetSquish}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{targetSquish}{targetSquish}}
+{\footnotesize\ttfamily \label{class_moving_sphere_a44e0122529a0cde9365892ac4ed48467} 
+float Moving\+Sphere.\+target\+Squish = 0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Target squish factor of the sphere. 
+
+\Hypertarget{class_moving_sphere_a7ac81b386dc9d14d451ceabc85a69aff}\index{MovingSphere@{MovingSphere}!visualSphere@{visualSphere}}
+\index{visualSphere@{visualSphere}!MovingSphere@{MovingSphere}}
+\doxysubsubsection{\texorpdfstring{visualSphere}{visualSphere}}
+{\footnotesize\ttfamily \label{class_moving_sphere_a7ac81b386dc9d14d451ceabc85a69aff} 
+Transform Moving\+Sphere.\+visual\+Sphere}
+
+
+
+Transform representing the visual sphere for squish effects. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_moving_sphere_8cs}{Moving\+Sphere.\+cs}}\end{DoxyCompactItemize}

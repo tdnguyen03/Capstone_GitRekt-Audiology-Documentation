@@ -1,0 +1,219 @@
+\doxysection{Danger\+Overlay\+UI Class Reference}
+\hypertarget{class_danger_overlay_u_i}{}\label{class_danger_overlay_u_i}\index{DangerOverlayUI@{DangerOverlayUI}}
+
+
+Manages the danger overlay UI and warning system.  
+
+
+Inheritance diagram for Danger\+Overlay\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_danger_overlay_u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_danger_overlay_u_i_a078e461f36a56a9932c7913009d1f232}{Set\+Intensity}} (float normalized, string message)
+\begin{DoxyCompactList}\small\item\em Sets the intensity of the danger overlay. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+Clip \mbox{\hyperlink{class_danger_overlay_u_i_ac7b32bf863b22f7f52f96535f33efe5f}{scream}}
+\begin{DoxyCompactList}\small\item\em Audio clip to play when entering a danger state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_danger_overlay_u_i}{Danger\+Overlay\+UI}} \mbox{\hyperlink{class_danger_overlay_u_i_a94f27b6a801d0359849af7fe908394a3}{Instance}}
+\begin{DoxyCompactList}\small\item\em Singleton instance of the \doxylink{class_danger_overlay_u_i}{Danger\+Overlay\+UI}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_danger_overlay_u_i_a7158893270f6604eac5e7c77829c3145}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Unity Awake method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_danger_overlay_u_i_a79d656e7a78caf534bbb178f5f9ae0a5}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Unity Start method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_danger_overlay_u_i_a60c0a93bf7a7e22b894a4e10159c81e0}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Unity Update method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+Source \mbox{\hyperlink{class_danger_overlay_u_i_a7266ea3fbc8ebee5d4764e9c64018de3}{audio\+Data}}
+\begin{DoxyCompactList}\small\item\em Audio source component for playing the scream sound. \end{DoxyCompactList}\item 
+Image \mbox{\hyperlink{class_danger_overlay_u_i_acbe6abc606916409146d63c210267ba1}{overlay\+Image}}
+\begin{DoxyCompactList}\small\item\em UI image for the danger overlay. \end{DoxyCompactList}\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_danger_overlay_u_i_a0d84a92c0c37f6a4728616355a1a0913}{warning\+Text}}
+\begin{DoxyCompactList}\small\item\em Text\+Mesh\+Pro element for displaying warning messages. \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{class_danger_overlay_u_i_a9e96a4e1a04a46e65b093fbf93821021}{danger\+Color}} = new Color(1f, 0f, 0f, 0.\+4f)
+\begin{DoxyCompactList}\small\item\em Color of the danger overlay. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_danger_overlay_u_i_ac844b9e8802f1b6111d27b796aec3c8d}{\+\_\+target\+Alpha}} = 0f
+\begin{DoxyCompactList}\small\item\em Target alpha value for the overlay\textquotesingle{}s transparency. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_danger_overlay_u_i_a8ea56530162e45a2850a58c1fc7dbfe2}{\+\_\+current\+Alpha}} = 0f
+\begin{DoxyCompactList}\small\item\em Current alpha value for the overlay\textquotesingle{}s transparency. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_danger_overlay_u_i_a275e9344acf5e04db12188782d93c538}{\+\_\+pending\+Message}} = "{}"{}
+\begin{DoxyCompactList}\small\item\em Pending warning message to display. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_danger_overlay_u_i_a8c5717f1c4b14fe910395ba50509d020}{\+\_\+play\+Scream\+Next\+Frame}} = false
+\begin{DoxyCompactList}\small\item\em Flag to indicate if the scream sound should play on the next frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the danger overlay UI and warning system. 
+
+This class handles the visual and audio feedback for danger situations, including a red overlay and warning text. It also plays a scream sound when entering a danger state. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_danger_overlay_u_i_a7158893270f6604eac5e7c77829c3145}\index{DangerOverlayUI@{DangerOverlayUI}!Awake@{Awake}}
+\index{Awake@{Awake}!DangerOverlayUI@{DangerOverlayUI}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_danger_overlay_u_i_a7158893270f6604eac5e7c77829c3145} 
+void Danger\+Overlay\+UI.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity Awake method. 
+
+Initializes the singleton instance and sets up the initial state of the overlay and warning text. \Hypertarget{class_danger_overlay_u_i_a078e461f36a56a9932c7913009d1f232}\index{DangerOverlayUI@{DangerOverlayUI}!SetIntensity@{SetIntensity}}
+\index{SetIntensity@{SetIntensity}!DangerOverlayUI@{DangerOverlayUI}}
+\doxysubsubsection{\texorpdfstring{SetIntensity()}{SetIntensity()}}
+{\footnotesize\ttfamily \label{class_danger_overlay_u_i_a078e461f36a56a9932c7913009d1f232} 
+static void Danger\+Overlay\+UI.\+Set\+Intensity (\begin{DoxyParamCaption}\item[{float}]{normalized}{, }\item[{string}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the intensity of the danger overlay. 
+
+Updates the target alpha and pending warning message. Triggers the scream sound if entering a danger state. 
+\begin{DoxyParams}{Parameters}
+{\em normalized} & The normalized intensity value (0 to 1). \\
+\hline
+{\em message} & The warning message to display. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_danger_overlay_u_i_a79d656e7a78caf534bbb178f5f9ae0a5}\index{DangerOverlayUI@{DangerOverlayUI}!Start@{Start}}
+\index{Start@{Start}!DangerOverlayUI@{DangerOverlayUI}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_danger_overlay_u_i_a79d656e7a78caf534bbb178f5f9ae0a5} 
+void Danger\+Overlay\+UI.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity Start method. 
+
+Initializes the audio source component. \Hypertarget{class_danger_overlay_u_i_a60c0a93bf7a7e22b894a4e10159c81e0}\index{DangerOverlayUI@{DangerOverlayUI}!Update@{Update}}
+\index{Update@{Update}!DangerOverlayUI@{DangerOverlayUI}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_danger_overlay_u_i_a60c0a93bf7a7e22b894a4e10159c81e0} 
+void Danger\+Overlay\+UI.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity Update method. 
+
+Updates the overlay\textquotesingle{}s transparency, plays the scream sound if needed, and updates the warning text. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_danger_overlay_u_i_a8ea56530162e45a2850a58c1fc7dbfe2}\index{DangerOverlayUI@{DangerOverlayUI}!\_currentAlpha@{\_currentAlpha}}
+\index{\_currentAlpha@{\_currentAlpha}!DangerOverlayUI@{DangerOverlayUI}}
+\doxysubsubsection{\texorpdfstring{\_currentAlpha}{\_currentAlpha}}
+{\footnotesize\ttfamily \label{class_danger_overlay_u_i_a8ea56530162e45a2850a58c1fc7dbfe2} 
+float Danger\+Overlay\+UI.\+\_\+current\+Alpha = 0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current alpha value for the overlay\textquotesingle{}s transparency. 
+
+\Hypertarget{class_danger_overlay_u_i_a275e9344acf5e04db12188782d93c538}\index{DangerOverlayUI@{DangerOverlayUI}!\_pendingMessage@{\_pendingMessage}}
+\index{\_pendingMessage@{\_pendingMessage}!DangerOverlayUI@{DangerOverlayUI}}
+\doxysubsubsection{\texorpdfstring{\_pendingMessage}{\_pendingMessage}}
+{\footnotesize\ttfamily \label{class_danger_overlay_u_i_a275e9344acf5e04db12188782d93c538} 
+string Danger\+Overlay\+UI.\+\_\+pending\+Message = "{}"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pending warning message to display. 
+
+\Hypertarget{class_danger_overlay_u_i_a8c5717f1c4b14fe910395ba50509d020}\index{DangerOverlayUI@{DangerOverlayUI}!\_playScreamNextFrame@{\_playScreamNextFrame}}
+\index{\_playScreamNextFrame@{\_playScreamNextFrame}!DangerOverlayUI@{DangerOverlayUI}}
+\doxysubsubsection{\texorpdfstring{\_playScreamNextFrame}{\_playScreamNextFrame}}
+{\footnotesize\ttfamily \label{class_danger_overlay_u_i_a8c5717f1c4b14fe910395ba50509d020} 
+bool Danger\+Overlay\+UI.\+\_\+play\+Scream\+Next\+Frame = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag to indicate if the scream sound should play on the next frame. 
+
+\Hypertarget{class_danger_overlay_u_i_ac844b9e8802f1b6111d27b796aec3c8d}\index{DangerOverlayUI@{DangerOverlayUI}!\_targetAlpha@{\_targetAlpha}}
+\index{\_targetAlpha@{\_targetAlpha}!DangerOverlayUI@{DangerOverlayUI}}
+\doxysubsubsection{\texorpdfstring{\_targetAlpha}{\_targetAlpha}}
+{\footnotesize\ttfamily \label{class_danger_overlay_u_i_ac844b9e8802f1b6111d27b796aec3c8d} 
+float Danger\+Overlay\+UI.\+\_\+target\+Alpha = 0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Target alpha value for the overlay\textquotesingle{}s transparency. 
+
+\Hypertarget{class_danger_overlay_u_i_a7266ea3fbc8ebee5d4764e9c64018de3}\index{DangerOverlayUI@{DangerOverlayUI}!audioData@{audioData}}
+\index{audioData@{audioData}!DangerOverlayUI@{DangerOverlayUI}}
+\doxysubsubsection{\texorpdfstring{audioData}{audioData}}
+{\footnotesize\ttfamily \label{class_danger_overlay_u_i_a7266ea3fbc8ebee5d4764e9c64018de3} 
+Audio\+Source Danger\+Overlay\+UI.\+audio\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Audio source component for playing the scream sound. 
+
+\Hypertarget{class_danger_overlay_u_i_a9e96a4e1a04a46e65b093fbf93821021}\index{DangerOverlayUI@{DangerOverlayUI}!dangerColor@{dangerColor}}
+\index{dangerColor@{dangerColor}!DangerOverlayUI@{DangerOverlayUI}}
+\doxysubsubsection{\texorpdfstring{dangerColor}{dangerColor}}
+{\footnotesize\ttfamily \label{class_danger_overlay_u_i_a9e96a4e1a04a46e65b093fbf93821021} 
+Color Danger\+Overlay\+UI.\+danger\+Color = new Color(1f, 0f, 0f, 0.\+4f)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Color of the danger overlay. 
+
+\Hypertarget{class_danger_overlay_u_i_a94f27b6a801d0359849af7fe908394a3}\index{DangerOverlayUI@{DangerOverlayUI}!Instance@{Instance}}
+\index{Instance@{Instance}!DangerOverlayUI@{DangerOverlayUI}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \label{class_danger_overlay_u_i_a94f27b6a801d0359849af7fe908394a3} 
+\mbox{\hyperlink{class_danger_overlay_u_i}{Danger\+Overlay\+UI}} Danger\+Overlay\+UI.\+Instance\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Singleton instance of the \doxylink{class_danger_overlay_u_i}{Danger\+Overlay\+UI}. 
+
+\Hypertarget{class_danger_overlay_u_i_acbe6abc606916409146d63c210267ba1}\index{DangerOverlayUI@{DangerOverlayUI}!overlayImage@{overlayImage}}
+\index{overlayImage@{overlayImage}!DangerOverlayUI@{DangerOverlayUI}}
+\doxysubsubsection{\texorpdfstring{overlayImage}{overlayImage}}
+{\footnotesize\ttfamily \label{class_danger_overlay_u_i_acbe6abc606916409146d63c210267ba1} 
+Image Danger\+Overlay\+UI.\+overlay\+Image\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+UI image for the danger overlay. 
+
+\Hypertarget{class_danger_overlay_u_i_ac7b32bf863b22f7f52f96535f33efe5f}\index{DangerOverlayUI@{DangerOverlayUI}!scream@{scream}}
+\index{scream@{scream}!DangerOverlayUI@{DangerOverlayUI}}
+\doxysubsubsection{\texorpdfstring{scream}{scream}}
+{\footnotesize\ttfamily \label{class_danger_overlay_u_i_ac7b32bf863b22f7f52f96535f33efe5f} 
+Audio\+Clip Danger\+Overlay\+UI.\+scream}
+
+
+
+Audio clip to play when entering a danger state. 
+
+\Hypertarget{class_danger_overlay_u_i_a0d84a92c0c37f6a4728616355a1a0913}\index{DangerOverlayUI@{DangerOverlayUI}!warningText@{warningText}}
+\index{warningText@{warningText}!DangerOverlayUI@{DangerOverlayUI}}
+\doxysubsubsection{\texorpdfstring{warningText}{warningText}}
+{\footnotesize\ttfamily \label{class_danger_overlay_u_i_a0d84a92c0c37f6a4728616355a1a0913} 
+Text\+Mesh\+Pro\+UGUI Danger\+Overlay\+UI.\+warning\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Text\+Mesh\+Pro element for displaying warning messages. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_danger_overlay_u_i_8cs}{Danger\+Overlay\+UI.\+cs}}\end{DoxyCompactItemize}

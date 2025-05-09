@@ -1,0 +1,328 @@
+\doxysection{Haptic\+Manager Class Reference}
+\hypertarget{class_haptic_manager}{}\label{class_haptic_manager}\index{HapticManager@{HapticManager}}
+
+
+Manages haptic feedback for various objects in the scene.  
+
+
+Inheritance diagram for Haptic\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_haptic_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_haptic_manager_a0ec9d39627c7efe9eb3d4c10017ffb9b}{Register\+Cube}} (\mbox{\hyperlink{class_cube_force_feedback}{Cube\+Force\+Feedback}} cube)
+\begin{DoxyCompactList}\small\item\em Registers a cube force feedback object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haptic_manager_ae9f6142521b006c3bb2f5ffca3ec62ed}{Register\+Sphere}} (\mbox{\hyperlink{class_sphere_force_feedback}{Sphere\+Force\+Feedback}} sphere)
+\begin{DoxyCompactList}\small\item\em Registers a sphere force feedback object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haptic_manager_a0e84c8c8135927f05f0c6fbb3e2de37f}{Register\+Danger\+Zone}} (\mbox{\hyperlink{class_danger_zone}{Danger\+Zone}} zone)
+\begin{DoxyCompactList}\small\item\em Registers a danger zone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haptic_manager_a594211ca065e906de47c95579c95f75d}{Register\+Tube}} (\mbox{\hyperlink{class_curved_tube_force_feedback}{Curved\+Tube\+Force\+Feedback}} tube)
+\begin{DoxyCompactList}\small\item\em Registers a curved tube force feedback object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haptic_manager_ae48382868de8fe60c76a2b7f834f65ee}{Register\+Moving\+Sphere}} (\mbox{\hyperlink{class_moving_sphere}{Moving\+Sphere}} sphere)
+\begin{DoxyCompactList}\small\item\em Registers a moving sphere. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haptic_manager_a2f7b043a8e87819fc7215f2c2321bbf6}{Register\+Plane}} (\mbox{\hyperlink{class_plane_force_feedback}{Plane\+Force\+Feedback}} plane)
+\begin{DoxyCompactList}\small\item\em Registers a plane force feedback object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haptic_manager_a824d788614f8ff5992aaf588e3f5f0fe}{Register\+Curette\+Trigger}} (\mbox{\hyperlink{class_curette_haptic_trigger}{Curette\+Haptic\+Trigger}} trigger)
+\begin{DoxyCompactList}\small\item\em Registers a curette haptic trigger. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haptic_manager_a37efb80a3866248148eed70dbf9ca097}{Register\+Cylinder}} (Cylinder\+Force\+Feedback cylinder)
+\begin{DoxyCompactList}\small\item\em Registers a cylinder force feedback object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Inverse3\+Controller \mbox{\hyperlink{class_haptic_manager_a3f5dd8f1908ea1184bd1e259b288d2c7}{inverse3}}
+\begin{DoxyCompactList}\small\item\em Reference to the Inverse3\+Controller for haptic device control. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_haptic_manager_a86af822ccf5be96c711bcf6b272b1dee}{On\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em Unity On\+Enable method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haptic_manager_a2a92f7a31ee1fd6662e892748ceaa0cc}{On\+Disable}} ()
+\begin{DoxyCompactList}\small\item\em Unity On\+Disable method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haptic_manager_a5b2fbc9357b86e7e1abc336629e78c08}{On\+Device\+State\+Changed}} (object sender, Inverse3\+Event\+Args args)
+\begin{DoxyCompactList}\small\item\em Handles the {\ttfamily Device\+State\+Changed} event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly List$<$ \mbox{\hyperlink{class_cube_force_feedback}{Cube\+Force\+Feedback}} $>$ \mbox{\hyperlink{class_haptic_manager_a0fc6479e856dcf2f61d15802a45064a6}{cubes}} = new()
+\begin{DoxyCompactList}\small\item\em List of registered cube force feedback objects. \end{DoxyCompactList}\item 
+readonly List$<$ \mbox{\hyperlink{class_sphere_force_feedback}{Sphere\+Force\+Feedback}} $>$ \mbox{\hyperlink{class_haptic_manager_a51497f599dc6a9f2cbc9abc11e26f2d5}{spheres}} = new()
+\begin{DoxyCompactList}\small\item\em List of registered sphere force feedback objects. \end{DoxyCompactList}\item 
+readonly List$<$ \mbox{\hyperlink{class_danger_zone}{Danger\+Zone}} $>$ \mbox{\hyperlink{class_haptic_manager_aea7151302a4eafec926d52406b3e43a3}{danger\+Zones}} = new()
+\begin{DoxyCompactList}\small\item\em List of registered danger zones. \end{DoxyCompactList}\item 
+readonly List$<$ \mbox{\hyperlink{class_curved_tube_force_feedback}{Curved\+Tube\+Force\+Feedback}} $>$ \mbox{\hyperlink{class_haptic_manager_ae760a3893a3f05d758734beeaf7bba95}{curved\+Tubes}} = new()
+\begin{DoxyCompactList}\small\item\em List of registered curved tube force feedback objects. \end{DoxyCompactList}\item 
+readonly List$<$ \mbox{\hyperlink{class_moving_sphere}{Moving\+Sphere}} $>$ \mbox{\hyperlink{class_haptic_manager_a119da89f70f02afef4a34e12e9046498}{moving\+Spheres}} = new()
+\begin{DoxyCompactList}\small\item\em List of registered moving spheres. \end{DoxyCompactList}\item 
+readonly List$<$ \mbox{\hyperlink{class_plane_force_feedback}{Plane\+Force\+Feedback}} $>$ \mbox{\hyperlink{class_haptic_manager_a6cd841653d48a114c3d85db2f5de7c23}{planes}} = new()
+\begin{DoxyCompactList}\small\item\em List of registered plane force feedback objects. \end{DoxyCompactList}\item 
+readonly List$<$ \mbox{\hyperlink{class_curette_haptic_trigger}{Curette\+Haptic\+Trigger}} $>$ \mbox{\hyperlink{class_haptic_manager_ab042a614a7a57cce6fef8954c99ea91e}{curette\+Triggers}} = new()
+\begin{DoxyCompactList}\small\item\em List of registered curette haptic triggers. \end{DoxyCompactList}\item 
+readonly List$<$ Cylinder\+Force\+Feedback $>$ \mbox{\hyperlink{class_haptic_manager_a5a8d1bef30595419fb3dbc7f95bfb63e}{cylinders}} = new()
+\begin{DoxyCompactList}\small\item\em List of registered cylinder force feedback objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages haptic feedback for various objects in the scene. 
+
+This class handles the registration of haptic-\/enabled objects and calculates the total force applied to the cursor. It also manages danger zones and updates the danger overlay UI. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_haptic_manager_a5b2fbc9357b86e7e1abc336629e78c08}\index{HapticManager@{HapticManager}!OnDeviceStateChanged@{OnDeviceStateChanged}}
+\index{OnDeviceStateChanged@{OnDeviceStateChanged}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{OnDeviceStateChanged()}{OnDeviceStateChanged()}}
+{\footnotesize\ttfamily \label{class_haptic_manager_a5b2fbc9357b86e7e1abc336629e78c08} 
+void Haptic\+Manager.\+On\+Device\+State\+Changed (\begin{DoxyParamCaption}\item[{object}]{sender}{, }\item[{Inverse3\+Event\+Args}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handles the {\ttfamily Device\+State\+Changed} event. 
+
+Calculates the total force applied to the cursor and updates the danger overlay UI. 
+\begin{DoxyParams}{Parameters}
+{\em sender} & The object that triggered the event. \\
+\hline
+{\em args} & The event arguments containing the device data. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_haptic_manager_a2a92f7a31ee1fd6662e892748ceaa0cc}\index{HapticManager@{HapticManager}!OnDisable@{OnDisable}}
+\index{OnDisable@{OnDisable}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{OnDisable()}{OnDisable()}}
+{\footnotesize\ttfamily \label{class_haptic_manager_a2a92f7a31ee1fd6662e892748ceaa0cc} 
+void Haptic\+Manager.\+On\+Disable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity On\+Disable method. 
+
+Unsubscribes from the {\ttfamily Device\+State\+Changed} event when the component is disabled. \Hypertarget{class_haptic_manager_a86af822ccf5be96c711bcf6b272b1dee}\index{HapticManager@{HapticManager}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily \label{class_haptic_manager_a86af822ccf5be96c711bcf6b272b1dee} 
+void Haptic\+Manager.\+On\+Enable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity On\+Enable method. 
+
+Subscribes to the {\ttfamily Device\+State\+Changed} event when the component is enabled. \Hypertarget{class_haptic_manager_a0ec9d39627c7efe9eb3d4c10017ffb9b}\index{HapticManager@{HapticManager}!RegisterCube@{RegisterCube}}
+\index{RegisterCube@{RegisterCube}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{RegisterCube()}{RegisterCube()}}
+{\footnotesize\ttfamily \label{class_haptic_manager_a0ec9d39627c7efe9eb3d4c10017ffb9b} 
+void Haptic\+Manager.\+Register\+Cube (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cube_force_feedback}{Cube\+Force\+Feedback}}}]{cube}{}\end{DoxyParamCaption})}
+
+
+
+Registers a cube force feedback object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cube} & The cube force feedback object to register. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_haptic_manager_a824d788614f8ff5992aaf588e3f5f0fe}\index{HapticManager@{HapticManager}!RegisterCuretteTrigger@{RegisterCuretteTrigger}}
+\index{RegisterCuretteTrigger@{RegisterCuretteTrigger}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{RegisterCuretteTrigger()}{RegisterCuretteTrigger()}}
+{\footnotesize\ttfamily \label{class_haptic_manager_a824d788614f8ff5992aaf588e3f5f0fe} 
+void Haptic\+Manager.\+Register\+Curette\+Trigger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_curette_haptic_trigger}{Curette\+Haptic\+Trigger}}}]{trigger}{}\end{DoxyParamCaption})}
+
+
+
+Registers a curette haptic trigger. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trigger} & The curette haptic trigger to register. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_haptic_manager_a37efb80a3866248148eed70dbf9ca097}\index{HapticManager@{HapticManager}!RegisterCylinder@{RegisterCylinder}}
+\index{RegisterCylinder@{RegisterCylinder}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{RegisterCylinder()}{RegisterCylinder()}}
+{\footnotesize\ttfamily \label{class_haptic_manager_a37efb80a3866248148eed70dbf9ca097} 
+void Haptic\+Manager.\+Register\+Cylinder (\begin{DoxyParamCaption}\item[{Cylinder\+Force\+Feedback}]{cylinder}{}\end{DoxyParamCaption})}
+
+
+
+Registers a cylinder force feedback object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cylinder} & The cylinder force feedback object to register. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_haptic_manager_a0e84c8c8135927f05f0c6fbb3e2de37f}\index{HapticManager@{HapticManager}!RegisterDangerZone@{RegisterDangerZone}}
+\index{RegisterDangerZone@{RegisterDangerZone}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{RegisterDangerZone()}{RegisterDangerZone()}}
+{\footnotesize\ttfamily \label{class_haptic_manager_a0e84c8c8135927f05f0c6fbb3e2de37f} 
+void Haptic\+Manager.\+Register\+Danger\+Zone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_danger_zone}{Danger\+Zone}}}]{zone}{}\end{DoxyParamCaption})}
+
+
+
+Registers a danger zone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone} & The danger zone to register. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_haptic_manager_ae48382868de8fe60c76a2b7f834f65ee}\index{HapticManager@{HapticManager}!RegisterMovingSphere@{RegisterMovingSphere}}
+\index{RegisterMovingSphere@{RegisterMovingSphere}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{RegisterMovingSphere()}{RegisterMovingSphere()}}
+{\footnotesize\ttfamily \label{class_haptic_manager_ae48382868de8fe60c76a2b7f834f65ee} 
+void Haptic\+Manager.\+Register\+Moving\+Sphere (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_moving_sphere}{Moving\+Sphere}}}]{sphere}{}\end{DoxyParamCaption})}
+
+
+
+Registers a moving sphere. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sphere} & The moving sphere to register. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_haptic_manager_a2f7b043a8e87819fc7215f2c2321bbf6}\index{HapticManager@{HapticManager}!RegisterPlane@{RegisterPlane}}
+\index{RegisterPlane@{RegisterPlane}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{RegisterPlane()}{RegisterPlane()}}
+{\footnotesize\ttfamily \label{class_haptic_manager_a2f7b043a8e87819fc7215f2c2321bbf6} 
+void Haptic\+Manager.\+Register\+Plane (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_plane_force_feedback}{Plane\+Force\+Feedback}}}]{plane}{}\end{DoxyParamCaption})}
+
+
+
+Registers a plane force feedback object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plane} & The plane force feedback object to register. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_haptic_manager_ae9f6142521b006c3bb2f5ffca3ec62ed}\index{HapticManager@{HapticManager}!RegisterSphere@{RegisterSphere}}
+\index{RegisterSphere@{RegisterSphere}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{RegisterSphere()}{RegisterSphere()}}
+{\footnotesize\ttfamily \label{class_haptic_manager_ae9f6142521b006c3bb2f5ffca3ec62ed} 
+void Haptic\+Manager.\+Register\+Sphere (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sphere_force_feedback}{Sphere\+Force\+Feedback}}}]{sphere}{}\end{DoxyParamCaption})}
+
+
+
+Registers a sphere force feedback object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sphere} & The sphere force feedback object to register. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_haptic_manager_a594211ca065e906de47c95579c95f75d}\index{HapticManager@{HapticManager}!RegisterTube@{RegisterTube}}
+\index{RegisterTube@{RegisterTube}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{RegisterTube()}{RegisterTube()}}
+{\footnotesize\ttfamily \label{class_haptic_manager_a594211ca065e906de47c95579c95f75d} 
+void Haptic\+Manager.\+Register\+Tube (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_curved_tube_force_feedback}{Curved\+Tube\+Force\+Feedback}}}]{tube}{}\end{DoxyParamCaption})}
+
+
+
+Registers a curved tube force feedback object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tube} & The curved tube force feedback object to register. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_haptic_manager_a0fc6479e856dcf2f61d15802a45064a6}\index{HapticManager@{HapticManager}!cubes@{cubes}}
+\index{cubes@{cubes}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{cubes}{cubes}}
+{\footnotesize\ttfamily \label{class_haptic_manager_a0fc6479e856dcf2f61d15802a45064a6} 
+readonly List$<$\mbox{\hyperlink{class_cube_force_feedback}{Cube\+Force\+Feedback}}$>$ Haptic\+Manager.\+cubes = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of registered cube force feedback objects. 
+
+\Hypertarget{class_haptic_manager_ab042a614a7a57cce6fef8954c99ea91e}\index{HapticManager@{HapticManager}!curetteTriggers@{curetteTriggers}}
+\index{curetteTriggers@{curetteTriggers}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{curetteTriggers}{curetteTriggers}}
+{\footnotesize\ttfamily \label{class_haptic_manager_ab042a614a7a57cce6fef8954c99ea91e} 
+readonly List$<$\mbox{\hyperlink{class_curette_haptic_trigger}{Curette\+Haptic\+Trigger}}$>$ Haptic\+Manager.\+curette\+Triggers = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of registered curette haptic triggers. 
+
+\Hypertarget{class_haptic_manager_ae760a3893a3f05d758734beeaf7bba95}\index{HapticManager@{HapticManager}!curvedTubes@{curvedTubes}}
+\index{curvedTubes@{curvedTubes}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{curvedTubes}{curvedTubes}}
+{\footnotesize\ttfamily \label{class_haptic_manager_ae760a3893a3f05d758734beeaf7bba95} 
+readonly List$<$\mbox{\hyperlink{class_curved_tube_force_feedback}{Curved\+Tube\+Force\+Feedback}}$>$ Haptic\+Manager.\+curved\+Tubes = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of registered curved tube force feedback objects. 
+
+\Hypertarget{class_haptic_manager_a5a8d1bef30595419fb3dbc7f95bfb63e}\index{HapticManager@{HapticManager}!cylinders@{cylinders}}
+\index{cylinders@{cylinders}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{cylinders}{cylinders}}
+{\footnotesize\ttfamily \label{class_haptic_manager_a5a8d1bef30595419fb3dbc7f95bfb63e} 
+readonly List$<$Cylinder\+Force\+Feedback$>$ Haptic\+Manager.\+cylinders = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of registered cylinder force feedback objects. 
+
+\Hypertarget{class_haptic_manager_aea7151302a4eafec926d52406b3e43a3}\index{HapticManager@{HapticManager}!dangerZones@{dangerZones}}
+\index{dangerZones@{dangerZones}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{dangerZones}{dangerZones}}
+{\footnotesize\ttfamily \label{class_haptic_manager_aea7151302a4eafec926d52406b3e43a3} 
+readonly List$<$\mbox{\hyperlink{class_danger_zone}{Danger\+Zone}}$>$ Haptic\+Manager.\+danger\+Zones = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of registered danger zones. 
+
+\Hypertarget{class_haptic_manager_a3f5dd8f1908ea1184bd1e259b288d2c7}\index{HapticManager@{HapticManager}!inverse3@{inverse3}}
+\index{inverse3@{inverse3}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{inverse3}{inverse3}}
+{\footnotesize\ttfamily \label{class_haptic_manager_a3f5dd8f1908ea1184bd1e259b288d2c7} 
+Inverse3\+Controller Haptic\+Manager.\+inverse3}
+
+
+
+Reference to the Inverse3\+Controller for haptic device control. 
+
+\Hypertarget{class_haptic_manager_a119da89f70f02afef4a34e12e9046498}\index{HapticManager@{HapticManager}!movingSpheres@{movingSpheres}}
+\index{movingSpheres@{movingSpheres}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{movingSpheres}{movingSpheres}}
+{\footnotesize\ttfamily \label{class_haptic_manager_a119da89f70f02afef4a34e12e9046498} 
+readonly List$<$\mbox{\hyperlink{class_moving_sphere}{Moving\+Sphere}}$>$ Haptic\+Manager.\+moving\+Spheres = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of registered moving spheres. 
+
+\Hypertarget{class_haptic_manager_a6cd841653d48a114c3d85db2f5de7c23}\index{HapticManager@{HapticManager}!planes@{planes}}
+\index{planes@{planes}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{planes}{planes}}
+{\footnotesize\ttfamily \label{class_haptic_manager_a6cd841653d48a114c3d85db2f5de7c23} 
+readonly List$<$\mbox{\hyperlink{class_plane_force_feedback}{Plane\+Force\+Feedback}}$>$ Haptic\+Manager.\+planes = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of registered plane force feedback objects. 
+
+\Hypertarget{class_haptic_manager_a51497f599dc6a9f2cbc9abc11e26f2d5}\index{HapticManager@{HapticManager}!spheres@{spheres}}
+\index{spheres@{spheres}!HapticManager@{HapticManager}}
+\doxysubsubsection{\texorpdfstring{spheres}{spheres}}
+{\footnotesize\ttfamily \label{class_haptic_manager_a51497f599dc6a9f2cbc9abc11e26f2d5} 
+readonly List$<$\mbox{\hyperlink{class_sphere_force_feedback}{Sphere\+Force\+Feedback}}$>$ Haptic\+Manager.\+spheres = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of registered sphere force feedback objects. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_haptic_manager_8cs}{Haptic\+Manager.\+cs}}\end{DoxyCompactItemize}

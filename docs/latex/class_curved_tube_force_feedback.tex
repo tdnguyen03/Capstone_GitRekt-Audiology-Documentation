@@ -1,0 +1,297 @@
+\doxysection{Curved\+Tube\+Force\+Feedback Class Reference}
+\hypertarget{class_curved_tube_force_feedback}{}\label{class_curved_tube_force_feedback}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+
+
+Provides force feedback for a curved tube object.  
+
+
+Inheritance diagram for Curved\+Tube\+Force\+Feedback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_curved_tube_force_feedback}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \mbox{\hyperlink{class_curved_tube_force_feedback_a30af2567eca750ed249e59e1657a64da}{Calculate\+Force}} (Vector3 cursor\+Pos, Vector3 cursor\+Vel, float cursor\+Radius)
+\begin{DoxyCompactList}\small\item\em Calculates the force feedback based on cursor interaction. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_curved_tube_force_feedback_ab60d567a1ee7aadbd334bbc1b8354431}{Calculate\+Radial\+Wall\+Force}} (Vector3 sphere\+Position, Vector3 sphere\+Velocity, float sphere\+Radius)
+\begin{DoxyCompactList}\small\item\em Calculates the radial wall force for a sphere interacting with the tube. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ Transform $>$ \mbox{\hyperlink{class_curved_tube_force_feedback_abf6ea384e44d0780e76fc7dbae3bf2be}{control\+Points}}
+\begin{DoxyCompactList}\small\item\em List of control points defining the spline of the tube. \end{DoxyCompactList}\item 
+Animation\+Curve \mbox{\hyperlink{class_curved_tube_force_feedback_ac751d9d72d4c88571d52dadd0910ea9a}{radius\+Profile}}
+\begin{DoxyCompactList}\small\item\em Animation curve defining the radius profile of the tube. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_curved_tube_force_feedback_a9e152ea04ba2c91fb8a162e96e77c79b}{spline\+Resolution}} = 100
+\begin{DoxyCompactList}\small\item\em Resolution of the spline for sampling points. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_curved_tube_force_feedback_a0447ff73f814fd109b6fb1326ae33f5e}{stiffness}} = 300f
+\begin{DoxyCompactList}\small\item\em Stiffness of the tube for force feedback calculations. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_curved_tube_force_feedback_aab8ea7a128d2bc2869b0a6498a390180}{damping}} = 1f
+\begin{DoxyCompactList}\small\item\em Damping factor for force feedback calculations. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_curved_tube_force_feedback_acd4c7015d0557ffba1b95968f84692d3}{enable\+Force}} = true
+\begin{DoxyCompactList}\small\item\em Enables or disables force feedback. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_curved_tube_force_feedback_adab1e169496d51c3729edae5eee488a0}{show\+Gizmos}} = true
+\begin{DoxyCompactList}\small\item\em Enables or disables visualization of the tube in the editor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_curved_tube_force_feedback_ad5135b4239793555832dd74537e7888e}{visualize\+Closest\+Point}} = true
+\begin{DoxyCompactList}\small\item\em Enables or disables visualization of the closest point on the tube. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_curved_tube_force_feedback_a57ad0c9432d0afd3cb062a3358994e01}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Unity Awake method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curved_tube_force_feedback_ae167f1272c09e70b18cb7f8ac3556cdf}{Cache\+Control\+Point\+Positions}} ()
+\begin{DoxyCompactList}\small\item\em Caches the positions of the control points. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_curved_tube_force_feedback_a08e1e80f8ac69548eedc5d809f02db35}{Get\+Point\+On\+Spline}} (float t)
+\begin{DoxyCompactList}\small\item\em Gets a point on the spline based on a parameter t. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curved_tube_force_feedback_ad05a69685a8c4b3f81dc16fdba68ff8a}{On\+Draw\+Gizmos}} ()
+\begin{DoxyCompactList}\small\item\em Unity On\+Draw\+Gizmos method. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_curved_tube_force_feedback_a0967d47d90d004dad1d1a77203c06d46}{Evaluate\+Spline\+From\+Transforms}} (float t)
+\begin{DoxyCompactList}\small\item\em Evaluates a point on the spline based on control points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector3\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_curved_tube_force_feedback_ac65083769514009f75676b16f6e4a564}{cached\+Positions}}
+\begin{DoxyCompactList}\small\item\em Cached positions of the control points for efficient calculations. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_curved_tube_force_feedback_a34ec75ff4304a5908157c74d13615e44}{\+\_\+closest\+Point}}
+\begin{DoxyCompactList}\small\item\em Closest point on the tube to the cursor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_curved_tube_force_feedback_ab0a77f589f2be37ad2fa87eff0e5ea3c}{\+\_\+penetration}}
+\begin{DoxyCompactList}\small\item\em Penetration depth of the cursor into the tube. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides force feedback for a curved tube object. 
+
+This class calculates force feedback based on the cursor\textquotesingle{}s position, velocity, and radius relative to a spline-\/based curved tube. It also supports visualization of the tube and its closest points. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_curved_tube_force_feedback_a57ad0c9432d0afd3cb062a3358994e01}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!Awake@{Awake}}
+\index{Awake@{Awake}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_a57ad0c9432d0afd3cb062a3358994e01} 
+void Curved\+Tube\+Force\+Feedback.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity Awake method. 
+
+Caches the control point positions and registers the tube with the \doxylink{class_haptic_manager}{Haptic\+Manager}. \Hypertarget{class_curved_tube_force_feedback_ae167f1272c09e70b18cb7f8ac3556cdf}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!CacheControlPointPositions@{CacheControlPointPositions}}
+\index{CacheControlPointPositions@{CacheControlPointPositions}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{CacheControlPointPositions()}{CacheControlPointPositions()}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_ae167f1272c09e70b18cb7f8ac3556cdf} 
+void Curved\+Tube\+Force\+Feedback.\+Cache\+Control\+Point\+Positions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Caches the positions of the control points. 
+
+Stores the world positions of the control points in an array for efficient spline calculations. \Hypertarget{class_curved_tube_force_feedback_a30af2567eca750ed249e59e1657a64da}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!CalculateForce@{CalculateForce}}
+\index{CalculateForce@{CalculateForce}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{CalculateForce()}{CalculateForce()}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_a30af2567eca750ed249e59e1657a64da} 
+Vector3 Curved\+Tube\+Force\+Feedback.\+Calculate\+Force (\begin{DoxyParamCaption}\item[{Vector3}]{cursor\+Pos}{, }\item[{Vector3}]{cursor\+Vel}{, }\item[{float}]{cursor\+Radius}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the force feedback based on cursor interaction. 
+
+Determines the force applied to the cursor based on its position, velocity, and radius relative to the tube. 
+\begin{DoxyParams}{Parameters}
+{\em cursor\+Pos} & The position of the cursor in world space. \\
+\hline
+{\em cursor\+Vel} & The velocity of the cursor. \\
+\hline
+{\em cursor\+Radius} & The radius of the cursor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector representing the calculated force. 
+\end{DoxyReturn}
+\Hypertarget{class_curved_tube_force_feedback_ab60d567a1ee7aadbd334bbc1b8354431}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!CalculateRadialWallForce@{CalculateRadialWallForce}}
+\index{CalculateRadialWallForce@{CalculateRadialWallForce}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{CalculateRadialWallForce()}{CalculateRadialWallForce()}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_ab60d567a1ee7aadbd334bbc1b8354431} 
+Vector3 Curved\+Tube\+Force\+Feedback.\+Calculate\+Radial\+Wall\+Force (\begin{DoxyParamCaption}\item[{Vector3}]{sphere\+Position}{, }\item[{Vector3}]{sphere\+Velocity}{, }\item[{float}]{sphere\+Radius}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the radial wall force for a sphere interacting with the tube. 
+
+Computes the force applied to the sphere based on its position, velocity, and radius relative to the tube\textquotesingle{}s walls. 
+\begin{DoxyParams}{Parameters}
+{\em sphere\+Position} & The position of the sphere in world space. \\
+\hline
+{\em sphere\+Velocity} & The velocity of the sphere. \\
+\hline
+{\em sphere\+Radius} & The radius of the sphere. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector representing the calculated radial wall force. 
+\end{DoxyReturn}
+\Hypertarget{class_curved_tube_force_feedback_a0967d47d90d004dad1d1a77203c06d46}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!EvaluateSplineFromTransforms@{EvaluateSplineFromTransforms}}
+\index{EvaluateSplineFromTransforms@{EvaluateSplineFromTransforms}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{EvaluateSplineFromTransforms()}{EvaluateSplineFromTransforms()}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_a0967d47d90d004dad1d1a77203c06d46} 
+Vector3 Curved\+Tube\+Force\+Feedback.\+Evaluate\+Spline\+From\+Transforms (\begin{DoxyParamCaption}\item[{float}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Evaluates a point on the spline based on control points. 
+
+Uses Catmull-\/\+Rom spline interpolation to calculate a point on the spline. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The parameter (0 to 1) representing the position along the spline. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector representing the point on the spline. 
+\end{DoxyReturn}
+\Hypertarget{class_curved_tube_force_feedback_a08e1e80f8ac69548eedc5d809f02db35}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!GetPointOnSpline@{GetPointOnSpline}}
+\index{GetPointOnSpline@{GetPointOnSpline}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{GetPointOnSpline()}{GetPointOnSpline()}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_a08e1e80f8ac69548eedc5d809f02db35} 
+Vector3 Curved\+Tube\+Force\+Feedback.\+Get\+Point\+On\+Spline (\begin{DoxyParamCaption}\item[{float}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets a point on the spline based on a parameter t. 
+
+Uses Catmull-\/\+Rom spline interpolation to calculate a point on the spline. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The parameter (0 to 1) representing the position along the spline. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector representing the point on the spline. 
+\end{DoxyReturn}
+\Hypertarget{class_curved_tube_force_feedback_ad05a69685a8c4b3f81dc16fdba68ff8a}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!OnDrawGizmos@{OnDrawGizmos}}
+\index{OnDrawGizmos@{OnDrawGizmos}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{OnDrawGizmos()}{OnDrawGizmos()}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_ad05a69685a8c4b3f81dc16fdba68ff8a} 
+void Curved\+Tube\+Force\+Feedback.\+On\+Draw\+Gizmos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity On\+Draw\+Gizmos method. 
+
+Visualizes the spline and radius profile in the editor using gizmos. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_curved_tube_force_feedback_a34ec75ff4304a5908157c74d13615e44}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!\_closestPoint@{\_closestPoint}}
+\index{\_closestPoint@{\_closestPoint}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{\_closestPoint}{\_closestPoint}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_a34ec75ff4304a5908157c74d13615e44} 
+Vector3 Curved\+Tube\+Force\+Feedback.\+\_\+closest\+Point\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Closest point on the tube to the cursor. 
+
+\Hypertarget{class_curved_tube_force_feedback_ab0a77f589f2be37ad2fa87eff0e5ea3c}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!\_penetration@{\_penetration}}
+\index{\_penetration@{\_penetration}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{\_penetration}{\_penetration}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_ab0a77f589f2be37ad2fa87eff0e5ea3c} 
+float Curved\+Tube\+Force\+Feedback.\+\_\+penetration\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Penetration depth of the cursor into the tube. 
+
+\Hypertarget{class_curved_tube_force_feedback_ac65083769514009f75676b16f6e4a564}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!cachedPositions@{cachedPositions}}
+\index{cachedPositions@{cachedPositions}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{cachedPositions}{cachedPositions}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_ac65083769514009f75676b16f6e4a564} 
+Vector3 \mbox{[}$\,$\mbox{]} Curved\+Tube\+Force\+Feedback.\+cached\+Positions\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Cached positions of the control points for efficient calculations. 
+
+\Hypertarget{class_curved_tube_force_feedback_abf6ea384e44d0780e76fc7dbae3bf2be}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!controlPoints@{controlPoints}}
+\index{controlPoints@{controlPoints}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{controlPoints}{controlPoints}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_abf6ea384e44d0780e76fc7dbae3bf2be} 
+List$<$Transform$>$ Curved\+Tube\+Force\+Feedback.\+control\+Points}
+
+
+
+List of control points defining the spline of the tube. 
+
+\Hypertarget{class_curved_tube_force_feedback_aab8ea7a128d2bc2869b0a6498a390180}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!damping@{damping}}
+\index{damping@{damping}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{damping}{damping}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_aab8ea7a128d2bc2869b0a6498a390180} 
+float Curved\+Tube\+Force\+Feedback.\+damping = 1f}
+
+
+
+Damping factor for force feedback calculations. 
+
+\Hypertarget{class_curved_tube_force_feedback_acd4c7015d0557ffba1b95968f84692d3}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!enableForce@{enableForce}}
+\index{enableForce@{enableForce}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{enableForce}{enableForce}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_acd4c7015d0557ffba1b95968f84692d3} 
+bool Curved\+Tube\+Force\+Feedback.\+enable\+Force = true}
+
+
+
+Enables or disables force feedback. 
+
+\Hypertarget{class_curved_tube_force_feedback_ac751d9d72d4c88571d52dadd0910ea9a}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!radiusProfile@{radiusProfile}}
+\index{radiusProfile@{radiusProfile}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{radiusProfile}{radiusProfile}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_ac751d9d72d4c88571d52dadd0910ea9a} 
+Animation\+Curve Curved\+Tube\+Force\+Feedback.\+radius\+Profile}
+
+
+
+Animation curve defining the radius profile of the tube. 
+
+\Hypertarget{class_curved_tube_force_feedback_adab1e169496d51c3729edae5eee488a0}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!showGizmos@{showGizmos}}
+\index{showGizmos@{showGizmos}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{showGizmos}{showGizmos}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_adab1e169496d51c3729edae5eee488a0} 
+bool Curved\+Tube\+Force\+Feedback.\+show\+Gizmos = true}
+
+
+
+Enables or disables visualization of the tube in the editor. 
+
+\Hypertarget{class_curved_tube_force_feedback_a9e152ea04ba2c91fb8a162e96e77c79b}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!splineResolution@{splineResolution}}
+\index{splineResolution@{splineResolution}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{splineResolution}{splineResolution}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_a9e152ea04ba2c91fb8a162e96e77c79b} 
+float Curved\+Tube\+Force\+Feedback.\+spline\+Resolution = 100}
+
+
+
+Resolution of the spline for sampling points. 
+
+\Hypertarget{class_curved_tube_force_feedback_a0447ff73f814fd109b6fb1326ae33f5e}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!stiffness@{stiffness}}
+\index{stiffness@{stiffness}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{stiffness}{stiffness}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_a0447ff73f814fd109b6fb1326ae33f5e} 
+float Curved\+Tube\+Force\+Feedback.\+stiffness = 300f}
+
+
+
+Stiffness of the tube for force feedback calculations. 
+
+\Hypertarget{class_curved_tube_force_feedback_ad5135b4239793555832dd74537e7888e}\index{CurvedTubeForceFeedback@{CurvedTubeForceFeedback}!visualizeClosestPoint@{visualizeClosestPoint}}
+\index{visualizeClosestPoint@{visualizeClosestPoint}!CurvedTubeForceFeedback@{CurvedTubeForceFeedback}}
+\doxysubsubsection{\texorpdfstring{visualizeClosestPoint}{visualizeClosestPoint}}
+{\footnotesize\ttfamily \label{class_curved_tube_force_feedback_ad5135b4239793555832dd74537e7888e} 
+bool Curved\+Tube\+Force\+Feedback.\+visualize\+Closest\+Point = true}
+
+
+
+Enables or disables visualization of the closest point on the tube. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_curved_tube_force_feedback_8cs}{Curved\+Tube\+Force\+Feedback.\+cs}}\end{DoxyCompactItemize}

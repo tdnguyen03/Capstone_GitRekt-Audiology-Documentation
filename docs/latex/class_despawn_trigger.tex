@@ -1,0 +1,88 @@
+\doxysection{Despawn\+Trigger Class Reference}
+\hypertarget{class_despawn_trigger}{}\label{class_despawn_trigger}\index{DespawnTrigger@{DespawnTrigger}}
+
+
+Handles the collision of cerumen objects and updates the UI.  
+
+
+Inheritance diagram for Despawn\+Trigger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_despawn_trigger}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_despawn_trigger_a3674c04cfddf966796fbdd228a2fa0ae}{On\+Trigger\+Enter}} (Collider other)
+\begin{DoxyCompactList}\small\item\em Unity On\+Trigger\+Enter method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_despawn_trigger_a36aa7c9626acafb9847f7ed4e62a8efb}{value}} = 0
+\begin{DoxyCompactList}\small\item\em Counter for the number of cerumen objects removed. \end{DoxyCompactList}\item 
+Text \mbox{\hyperlink{class_despawn_trigger_ad51730274d34d2f3e80d378d93aa402b}{Cerumen\+Text}}
+\begin{DoxyCompactList}\small\item\em UI Text element to display the number of cerumen removed. \end{DoxyCompactList}\item 
+Spawn\+Sphere\+Script \mbox{\hyperlink{class_despawn_trigger_aea5ab2525fdcdde80568f9bcdbec98b3}{spawn\+Sphere\+Script}}
+\begin{DoxyCompactList}\small\item\em Reference to the Spawn\+Sphere\+Script for spawning new objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the collision of cerumen objects and updates the UI. 
+
+This class detects collisions with cerumen objects, removes them, updates the UI text, and triggers the spawning of new objects. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_despawn_trigger_a3674c04cfddf966796fbdd228a2fa0ae}\index{DespawnTrigger@{DespawnTrigger}!OnTriggerEnter@{OnTriggerEnter}}
+\index{OnTriggerEnter@{OnTriggerEnter}!DespawnTrigger@{DespawnTrigger}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter()}{OnTriggerEnter()}}
+{\footnotesize\ttfamily \label{class_despawn_trigger_a3674c04cfddf966796fbdd228a2fa0ae} 
+void Despawn\+Trigger.\+On\+Trigger\+Enter (\begin{DoxyParamCaption}\item[{Collider}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity On\+Trigger\+Enter method. 
+
+Detects collisions with cerumen objects, removes them, updates the UI, and spawns new objects. 
+\begin{DoxyParams}{Parameters}
+{\em other} & The collider of the object that triggered the collision. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_despawn_trigger_ad51730274d34d2f3e80d378d93aa402b}\index{DespawnTrigger@{DespawnTrigger}!CerumenText@{CerumenText}}
+\index{CerumenText@{CerumenText}!DespawnTrigger@{DespawnTrigger}}
+\doxysubsubsection{\texorpdfstring{CerumenText}{CerumenText}}
+{\footnotesize\ttfamily \label{class_despawn_trigger_ad51730274d34d2f3e80d378d93aa402b} 
+Text Despawn\+Trigger.\+Cerumen\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+UI Text element to display the number of cerumen removed. 
+
+\Hypertarget{class_despawn_trigger_aea5ab2525fdcdde80568f9bcdbec98b3}\index{DespawnTrigger@{DespawnTrigger}!spawnSphereScript@{spawnSphereScript}}
+\index{spawnSphereScript@{spawnSphereScript}!DespawnTrigger@{DespawnTrigger}}
+\doxysubsubsection{\texorpdfstring{spawnSphereScript}{spawnSphereScript}}
+{\footnotesize\ttfamily \label{class_despawn_trigger_aea5ab2525fdcdde80568f9bcdbec98b3} 
+Spawn\+Sphere\+Script Despawn\+Trigger.\+spawn\+Sphere\+Script\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to the Spawn\+Sphere\+Script for spawning new objects. 
+
+\Hypertarget{class_despawn_trigger_a36aa7c9626acafb9847f7ed4e62a8efb}\index{DespawnTrigger@{DespawnTrigger}!value@{value}}
+\index{value@{value}!DespawnTrigger@{DespawnTrigger}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \label{class_despawn_trigger_a36aa7c9626acafb9847f7ed4e62a8efb} 
+int Despawn\+Trigger.\+value = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Counter for the number of cerumen objects removed. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cerumen_collision_handler_8cs}{Cerumen\+Collision\+Handler.\+cs}}\end{DoxyCompactItemize}

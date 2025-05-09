@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['keyboardscript_0',['KeyboardScript',['../class_keyboard_script.html',1,'']]]
+  ['hapticmanager_0',['HapticManager',['../class_haptic_manager.html',1,'']]],
+  ['headloader_1',['HeadLoader',['../class_head_loader.html',1,'']]]
 ];

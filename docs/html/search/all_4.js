@@ -1,8 +1,14 @@
 var searchData=
 [
-  ['elapsedtime_0',['elapsedTime',['../class_clock_script.html#ac0e0d1f70c4a16d2fcfc3b564a1fd262',1,'ClockScript']]],
-  ['endgamescene_1',['endGameScene',['../class_clock_script.html#a27a2616aa383356ae166d7645f326e43',1,'ClockScript']]],
-  ['endscenescript_2',['EndSceneScript',['../class_end_scene_script.html',1,'']]],
-  ['endscenescript_2ecs_3',['EndSceneScript.cs',['../_end_scene_script_8cs.html',1,'']]],
-  ['exitsimulation_4',['ExitSimulation',['../class_clock_script.html#ad71c7e78020e69a1e736b69c35ebe147',1,'ClockScript']]]
+  ['damping_0',['damping',['../class_cube_force_feedback.html#a45c98923e3c8f28d2f2515b3e2f5a20d',1,'CubeForceFeedback.damping'],['../class_curved_tube_force_feedback.html#aab8ea7a128d2bc2869b0a6498a390180',1,'CurvedTubeForceFeedback.damping'],['../class_plane_force_feedback.html#a44840cc8b36d996bbc980246f4fe3522',1,'PlaneForceFeedback.damping'],['../class_sphere_force_feedback.html#a1d6b796239125f41d766c75c5261b7da',1,'SphereForceFeedback.damping']]],
+  ['dangercolor_1',['dangerColor',['../class_danger_overlay_u_i.html#a9e96a4e1a04a46e65b093fbf93821021',1,'DangerOverlayUI']]],
+  ['dangeroverlayui_2',['DangerOverlayUI',['../class_danger_overlay_u_i.html',1,'']]],
+  ['dangeroverlayui_2ecs_3',['DangerOverlayUI.cs',['../_danger_overlay_u_i_8cs.html',1,'']]],
+  ['dangerradius_4',['dangerRadius',['../class_danger_zone.html#ad2fca9faacedac24f88228517d268ed8',1,'DangerZone']]],
+  ['dangerzone_5',['DangerZone',['../class_danger_zone.html',1,'']]],
+  ['dangerzone_2ecs_6',['DangerZone.cs',['../_danger_zone_8cs.html',1,'']]],
+  ['dangerzones_7',['dangerZones',['../class_haptic_manager.html#aea7151302a4eafec926d52406b3e43a3',1,'HapticManager']]],
+  ['despawntrigger_8',['DespawnTrigger',['../class_despawn_trigger.html',1,'']]],
+  ['displaystats_2ecs_9',['DisplayStats.cs',['../_display_stats_8cs.html',1,'']]],
+  ['documentation_10',['Capstone_GitRekt-Audiology-Documentation',['../md__r_e_a_d_m_e.html',1,'']]]
 ];

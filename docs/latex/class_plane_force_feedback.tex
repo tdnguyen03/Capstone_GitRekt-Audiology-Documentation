@@ -1,0 +1,113 @@
+\doxysection{Plane\+Force\+Feedback Class Reference}
+\hypertarget{class_plane_force_feedback}{}\label{class_plane_force_feedback}\index{PlaneForceFeedback@{PlaneForceFeedback}}
+
+
+Provides force feedback for a horizontal plane.  
+
+
+Inheritance diagram for Plane\+Force\+Feedback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_plane_force_feedback}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \mbox{\hyperlink{class_plane_force_feedback_ac057218d1bea9e95775fe8aa7bb85adb}{Calculate\+Force}} (Vector3 cursor\+Position, Vector3 cursor\+Velocity, float cursor\+Radius)
+\begin{DoxyCompactList}\small\item\em Calculates the force feedback based on cursor interaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_plane_force_feedback_a1432e3d08da8bff2a12fc32284570e0e}{stiffness}} = 300f
+\begin{DoxyCompactList}\small\item\em Stiffness of the plane for force feedback calculations. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_plane_force_feedback_a44840cc8b36d996bbc980246f4fe3522}{damping}} = 1f
+\begin{DoxyCompactList}\small\item\em Damping factor for force feedback calculations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_plane_force_feedback_a1e941389040455e7da469c883ad1ca43}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Unity Awake method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_plane_force_feedback_aea6595626c7efc9353da40def2e78354}{planeY}}
+\begin{DoxyCompactList}\small\item\em Y-\/coordinate of the plane in world space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides force feedback for a horizontal plane. 
+
+This class calculates the force feedback based on the cursor\textquotesingle{}s position, velocity, and radius relative to a horizontal plane. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_plane_force_feedback_a1e941389040455e7da469c883ad1ca43}\index{PlaneForceFeedback@{PlaneForceFeedback}!Awake@{Awake}}
+\index{Awake@{Awake}!PlaneForceFeedback@{PlaneForceFeedback}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_plane_force_feedback_a1e941389040455e7da469c883ad1ca43} 
+void Plane\+Force\+Feedback.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity Awake method. 
+
+Initializes the plane\textquotesingle{}s Y-\/coordinate and registers it with the \doxylink{class_haptic_manager}{Haptic\+Manager}. \Hypertarget{class_plane_force_feedback_ac057218d1bea9e95775fe8aa7bb85adb}\index{PlaneForceFeedback@{PlaneForceFeedback}!CalculateForce@{CalculateForce}}
+\index{CalculateForce@{CalculateForce}!PlaneForceFeedback@{PlaneForceFeedback}}
+\doxysubsubsection{\texorpdfstring{CalculateForce()}{CalculateForce()}}
+{\footnotesize\ttfamily \label{class_plane_force_feedback_ac057218d1bea9e95775fe8aa7bb85adb} 
+Vector3 Plane\+Force\+Feedback.\+Calculate\+Force (\begin{DoxyParamCaption}\item[{Vector3}]{cursor\+Position}{, }\item[{Vector3}]{cursor\+Velocity}{, }\item[{float}]{cursor\+Radius}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the force feedback based on cursor interaction. 
+
+Determines the force applied to the cursor based on its position, velocity, and radius relative to the plane. 
+\begin{DoxyParams}{Parameters}
+{\em cursor\+Position} & The position of the cursor in world space. \\
+\hline
+{\em cursor\+Velocity} & The velocity of the cursor. \\
+\hline
+{\em cursor\+Radius} & The radius of the cursor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector representing the calculated force. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_plane_force_feedback_a44840cc8b36d996bbc980246f4fe3522}\index{PlaneForceFeedback@{PlaneForceFeedback}!damping@{damping}}
+\index{damping@{damping}!PlaneForceFeedback@{PlaneForceFeedback}}
+\doxysubsubsection{\texorpdfstring{damping}{damping}}
+{\footnotesize\ttfamily \label{class_plane_force_feedback_a44840cc8b36d996bbc980246f4fe3522} 
+float Plane\+Force\+Feedback.\+damping = 1f}
+
+
+
+Damping factor for force feedback calculations. 
+
+\Hypertarget{class_plane_force_feedback_aea6595626c7efc9353da40def2e78354}\index{PlaneForceFeedback@{PlaneForceFeedback}!planeY@{planeY}}
+\index{planeY@{planeY}!PlaneForceFeedback@{PlaneForceFeedback}}
+\doxysubsubsection{\texorpdfstring{planeY}{planeY}}
+{\footnotesize\ttfamily \label{class_plane_force_feedback_aea6595626c7efc9353da40def2e78354} 
+float Plane\+Force\+Feedback.\+planeY\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Y-\/coordinate of the plane in world space. 
+
+\Hypertarget{class_plane_force_feedback_a1432e3d08da8bff2a12fc32284570e0e}\index{PlaneForceFeedback@{PlaneForceFeedback}!stiffness@{stiffness}}
+\index{stiffness@{stiffness}!PlaneForceFeedback@{PlaneForceFeedback}}
+\doxysubsubsection{\texorpdfstring{stiffness}{stiffness}}
+{\footnotesize\ttfamily \label{class_plane_force_feedback_a1432e3d08da8bff2a12fc32284570e0e} 
+float Plane\+Force\+Feedback.\+stiffness = 300f}
+
+
+
+Stiffness of the plane for force feedback calculations. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_plane_force_feedback_8cs}{Plane\+Force\+Feedback.\+cs}}\end{DoxyCompactItemize}

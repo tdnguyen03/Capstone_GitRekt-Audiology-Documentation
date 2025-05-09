@@ -1,0 +1,125 @@
+\doxysection{Sphere\+Force\+Feedback Class Reference}
+\hypertarget{class_sphere_force_feedback}{}\label{class_sphere_force_feedback}\index{SphereForceFeedback@{SphereForceFeedback}}
+
+
+Provides force feedback for a spherical object.  
+
+
+Inheritance diagram for Sphere\+Force\+Feedback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sphere_force_feedback}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \mbox{\hyperlink{class_sphere_force_feedback_ab08663fc16be8fd19f9dfbf639c2d2bc}{Calculate\+Force}} (Vector3 cursor\+Position, Vector3 cursor\+Velocity, float cursor\+Radius)
+\begin{DoxyCompactList}\small\item\em Calculates the force feedback based on cursor interaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_sphere_force_feedback_ac6177556cf3c71c3380aac04f2475242}{stiffness}} = 300f
+\begin{DoxyCompactList}\small\item\em Stiffness of the sphere for force feedback calculations. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sphere_force_feedback_a1d6b796239125f41d766c75c5261b7da}{damping}} = 1f
+\begin{DoxyCompactList}\small\item\em Damping factor for force feedback calculations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_sphere_force_feedback_a1ce5c82a42e5fdcd686e8e923d9ab26e}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Unity Awake method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \mbox{\hyperlink{class_sphere_force_feedback_a314fc4ce048aec3b9ff9ec61a730f9e7}{\+\_\+ball\+Position}}
+\begin{DoxyCompactList}\small\item\em Position of the sphere in world space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sphere_force_feedback_a289a0cabc9bed78ddef4bbaae0beb61f}{\+\_\+ball\+Radius}}
+\begin{DoxyCompactList}\small\item\em Radius of the sphere. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides force feedback for a spherical object. 
+
+This class calculates the force feedback based on the cursor\textquotesingle{}s position, velocity, and radius relative to a sphere. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sphere_force_feedback_a1ce5c82a42e5fdcd686e8e923d9ab26e}\index{SphereForceFeedback@{SphereForceFeedback}!Awake@{Awake}}
+\index{Awake@{Awake}!SphereForceFeedback@{SphereForceFeedback}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_sphere_force_feedback_a1ce5c82a42e5fdcd686e8e923d9ab26e} 
+void Sphere\+Force\+Feedback.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity Awake method. 
+
+Initializes the sphere\textquotesingle{}s position and radius, and registers it with the \doxylink{class_haptic_manager}{Haptic\+Manager}. \Hypertarget{class_sphere_force_feedback_ab08663fc16be8fd19f9dfbf639c2d2bc}\index{SphereForceFeedback@{SphereForceFeedback}!CalculateForce@{CalculateForce}}
+\index{CalculateForce@{CalculateForce}!SphereForceFeedback@{SphereForceFeedback}}
+\doxysubsubsection{\texorpdfstring{CalculateForce()}{CalculateForce()}}
+{\footnotesize\ttfamily \label{class_sphere_force_feedback_ab08663fc16be8fd19f9dfbf639c2d2bc} 
+Vector3 Sphere\+Force\+Feedback.\+Calculate\+Force (\begin{DoxyParamCaption}\item[{Vector3}]{cursor\+Position}{, }\item[{Vector3}]{cursor\+Velocity}{, }\item[{float}]{cursor\+Radius}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the force feedback based on cursor interaction. 
+
+Determines the force applied to the cursor based on its position, velocity, and radius relative to the sphere. 
+\begin{DoxyParams}{Parameters}
+{\em cursor\+Position} & The position of the cursor in world space. \\
+\hline
+{\em cursor\+Velocity} & The velocity of the cursor. \\
+\hline
+{\em cursor\+Radius} & The radius of the cursor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector representing the calculated force. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_sphere_force_feedback_a314fc4ce048aec3b9ff9ec61a730f9e7}\index{SphereForceFeedback@{SphereForceFeedback}!\_ballPosition@{\_ballPosition}}
+\index{\_ballPosition@{\_ballPosition}!SphereForceFeedback@{SphereForceFeedback}}
+\doxysubsubsection{\texorpdfstring{\_ballPosition}{\_ballPosition}}
+{\footnotesize\ttfamily \label{class_sphere_force_feedback_a314fc4ce048aec3b9ff9ec61a730f9e7} 
+Vector3 Sphere\+Force\+Feedback.\+\_\+ball\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Position of the sphere in world space. 
+
+\Hypertarget{class_sphere_force_feedback_a289a0cabc9bed78ddef4bbaae0beb61f}\index{SphereForceFeedback@{SphereForceFeedback}!\_ballRadius@{\_ballRadius}}
+\index{\_ballRadius@{\_ballRadius}!SphereForceFeedback@{SphereForceFeedback}}
+\doxysubsubsection{\texorpdfstring{\_ballRadius}{\_ballRadius}}
+{\footnotesize\ttfamily \label{class_sphere_force_feedback_a289a0cabc9bed78ddef4bbaae0beb61f} 
+float Sphere\+Force\+Feedback.\+\_\+ball\+Radius\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Radius of the sphere. 
+
+\Hypertarget{class_sphere_force_feedback_a1d6b796239125f41d766c75c5261b7da}\index{SphereForceFeedback@{SphereForceFeedback}!damping@{damping}}
+\index{damping@{damping}!SphereForceFeedback@{SphereForceFeedback}}
+\doxysubsubsection{\texorpdfstring{damping}{damping}}
+{\footnotesize\ttfamily \label{class_sphere_force_feedback_a1d6b796239125f41d766c75c5261b7da} 
+float Sphere\+Force\+Feedback.\+damping = 1f}
+
+
+
+Damping factor for force feedback calculations. 
+
+\Hypertarget{class_sphere_force_feedback_ac6177556cf3c71c3380aac04f2475242}\index{SphereForceFeedback@{SphereForceFeedback}!stiffness@{stiffness}}
+\index{stiffness@{stiffness}!SphereForceFeedback@{SphereForceFeedback}}
+\doxysubsubsection{\texorpdfstring{stiffness}{stiffness}}
+{\footnotesize\ttfamily \label{class_sphere_force_feedback_ac6177556cf3c71c3380aac04f2475242} 
+float Sphere\+Force\+Feedback.\+stiffness = 300f}
+
+
+
+Stiffness of the sphere for force feedback calculations. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_sphere_force_feedback_8cs}{Sphere\+Force\+Feedback.\+cs}}\end{DoxyCompactItemize}

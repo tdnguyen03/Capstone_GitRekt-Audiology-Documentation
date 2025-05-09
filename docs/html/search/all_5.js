@@ -1,6 +1,11 @@
 var searchData=
 [
-  ['fastest_0',['Fastest',['../class_stats_scene_script.html#ad1a80b9330765dcfd101af5db55d9360a90fd7fdf6f41406a75e5265b9583bb4e',1,'StatsSceneScript']]],
-  ['filepath_1',['filePath',['../class_stats_scene_script.html#ab04187483b36003eed72f58987c875be',1,'StatsSceneScript.filePath'],['../class_stats_manager.html#ae07f93659afb19600a1a1b006baeec3a',1,'StatsManager.filePath']]],
-  ['formattime_2',['FormatTime',['../class_stats_scene_script.html#a2e5ca9c33da9484be238b04143ea41d9',1,'StatsSceneScript']]]
+  ['elapsedtime_0',['elapsedTime',['../class_clock_script.html#ac0e0d1f70c4a16d2fcfc3b564a1fd262',1,'ClockScript']]],
+  ['enablecolorfeedback_1',['enableColorFeedback',['../class_cube_force_feedback.html#a708078085f46e25dc257b5de391bd520',1,'CubeForceFeedback']]],
+  ['enableforce_2',['enableForce',['../class_curved_tube_force_feedback.html#acd4c7015d0557ffba1b95968f84692d3',1,'CurvedTubeForceFeedback']]],
+  ['endgamescene_3',['endGameScene',['../class_clock_script.html#a27a2616aa383356ae166d7645f326e43',1,'ClockScript']]],
+  ['endscenescript_4',['EndSceneScript',['../class_end_scene_script.html',1,'']]],
+  ['endscenescript_2ecs_5',['EndSceneScript.cs',['../_end_scene_script_8cs.html',1,'']]],
+  ['evaluatesplinefromtransforms_6',['EvaluateSplineFromTransforms',['../class_curved_tube_force_feedback.html#a0967d47d90d004dad1d1a77203c06d46',1,'CurvedTubeForceFeedback']]],
+  ['exitsimulation_7',['ExitSimulation',['../class_clock_script.html#ad71c7e78020e69a1e736b69c35ebe147',1,'ClockScript']]]
 ];

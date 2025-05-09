@@ -1,0 +1,150 @@
+\doxysection{Danger\+Zone Class Reference}
+\hypertarget{class_danger_zone}{}\label{class_danger_zone}\index{DangerZone@{DangerZone}}
+
+
+Represents a danger zone that detects penetration depth.  
+
+
+Inheritance diagram for Danger\+Zone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_danger_zone}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_danger_zone_ad9859ad608f8c24a6763073f67e234d4}{Get\+Penetration\+Depth}} (Vector3 cursor\+Position, float cursor\+Radius)
+\begin{DoxyCompactList}\small\item\em Calculates the penetration depth of the cursor into the danger zone. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_danger_zone_a1be1d7875373b96554e803185d3d3c14}{Normalized\+Penetration}} ()
+\begin{DoxyCompactList}\small\item\em Normalizes the penetration depth. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_danger_zone_ad2fca9faacedac24f88228517d268ed8}{danger\+Radius}} = 0.\+01f
+\begin{DoxyCompactList}\small\item\em Radius of the danger zone for normalized penetration calculations. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_danger_zone_a4ba517df1141c1753a78d3cf01216918}{warning\+Message}}
+\begin{DoxyCompactList}\small\item\em Warning message to display when the danger zone is penetrated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_danger_zone_aafcb1cb14402a87d636ab03f7938e9a2}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Unity Awake method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \mbox{\hyperlink{class_danger_zone_a263980b83efff40c58a99836ad63b0aa}{\+\_\+cube\+Position}}
+\begin{DoxyCompactList}\small\item\em Position of the danger zone in world space. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_danger_zone_a4108834163ade4c741db606f1780245e}{\+\_\+cube\+Size}}
+\begin{DoxyCompactList}\small\item\em Size of the danger zone in world space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_danger_zone_a30752da47491dbd423adee64c7766f80}{\+\_\+penetration}} = 0f
+\begin{DoxyCompactList}\small\item\em Current penetration depth of the cursor into the danger zone. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a danger zone that detects penetration depth. 
+
+This class calculates the penetration depth of a cursor into a danger zone and normalizes the penetration for use in visual or haptic feedback systems. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_danger_zone_aafcb1cb14402a87d636ab03f7938e9a2}\index{DangerZone@{DangerZone}!Awake@{Awake}}
+\index{Awake@{Awake}!DangerZone@{DangerZone}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_danger_zone_aafcb1cb14402a87d636ab03f7938e9a2} 
+void Danger\+Zone.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unity Awake method. 
+
+Initializes the danger zone\textquotesingle{}s position and size, and registers it with the \doxylink{class_haptic_manager}{Haptic\+Manager}. \Hypertarget{class_danger_zone_ad9859ad608f8c24a6763073f67e234d4}\index{DangerZone@{DangerZone}!GetPenetrationDepth@{GetPenetrationDepth}}
+\index{GetPenetrationDepth@{GetPenetrationDepth}!DangerZone@{DangerZone}}
+\doxysubsubsection{\texorpdfstring{GetPenetrationDepth()}{GetPenetrationDepth()}}
+{\footnotesize\ttfamily \label{class_danger_zone_ad9859ad608f8c24a6763073f67e234d4} 
+float Danger\+Zone.\+Get\+Penetration\+Depth (\begin{DoxyParamCaption}\item[{Vector3}]{cursor\+Position}{, }\item[{float}]{cursor\+Radius}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the penetration depth of the cursor into the danger zone. 
+
+Determines how far the cursor has penetrated into the danger zone based on its position and radius. 
+\begin{DoxyParams}{Parameters}
+{\em cursor\+Position} & The position of the cursor in world space. \\
+\hline
+{\em cursor\+Radius} & The radius of the cursor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The penetration depth of the cursor into the danger zone. 
+\end{DoxyReturn}
+\Hypertarget{class_danger_zone_a1be1d7875373b96554e803185d3d3c14}\index{DangerZone@{DangerZone}!NormalizedPenetration@{NormalizedPenetration}}
+\index{NormalizedPenetration@{NormalizedPenetration}!DangerZone@{DangerZone}}
+\doxysubsubsection{\texorpdfstring{NormalizedPenetration()}{NormalizedPenetration()}}
+{\footnotesize\ttfamily \label{class_danger_zone_a1be1d7875373b96554e803185d3d3c14} 
+float Danger\+Zone.\+Normalized\+Penetration (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Normalizes the penetration depth. 
+
+Converts the penetration depth into a normalized value between 0 and 1 based on the danger radius. \begin{DoxyReturn}{Returns}
+A float representing the normalized penetration depth. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_danger_zone_a263980b83efff40c58a99836ad63b0aa}\index{DangerZone@{DangerZone}!\_cubePosition@{\_cubePosition}}
+\index{\_cubePosition@{\_cubePosition}!DangerZone@{DangerZone}}
+\doxysubsubsection{\texorpdfstring{\_cubePosition}{\_cubePosition}}
+{\footnotesize\ttfamily \label{class_danger_zone_a263980b83efff40c58a99836ad63b0aa} 
+Vector3 Danger\+Zone.\+\_\+cube\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Position of the danger zone in world space. 
+
+\Hypertarget{class_danger_zone_a4108834163ade4c741db606f1780245e}\index{DangerZone@{DangerZone}!\_cubeSize@{\_cubeSize}}
+\index{\_cubeSize@{\_cubeSize}!DangerZone@{DangerZone}}
+\doxysubsubsection{\texorpdfstring{\_cubeSize}{\_cubeSize}}
+{\footnotesize\ttfamily \label{class_danger_zone_a4108834163ade4c741db606f1780245e} 
+Vector3 Danger\+Zone.\+\_\+cube\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Size of the danger zone in world space. 
+
+\Hypertarget{class_danger_zone_a30752da47491dbd423adee64c7766f80}\index{DangerZone@{DangerZone}!\_penetration@{\_penetration}}
+\index{\_penetration@{\_penetration}!DangerZone@{DangerZone}}
+\doxysubsubsection{\texorpdfstring{\_penetration}{\_penetration}}
+{\footnotesize\ttfamily \label{class_danger_zone_a30752da47491dbd423adee64c7766f80} 
+float Danger\+Zone.\+\_\+penetration = 0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current penetration depth of the cursor into the danger zone. 
+
+\Hypertarget{class_danger_zone_ad2fca9faacedac24f88228517d268ed8}\index{DangerZone@{DangerZone}!dangerRadius@{dangerRadius}}
+\index{dangerRadius@{dangerRadius}!DangerZone@{DangerZone}}
+\doxysubsubsection{\texorpdfstring{dangerRadius}{dangerRadius}}
+{\footnotesize\ttfamily \label{class_danger_zone_ad2fca9faacedac24f88228517d268ed8} 
+float Danger\+Zone.\+danger\+Radius = 0.\+01f}
+
+
+
+Radius of the danger zone for normalized penetration calculations. 
+
+\Hypertarget{class_danger_zone_a4ba517df1141c1753a78d3cf01216918}\index{DangerZone@{DangerZone}!warningMessage@{warningMessage}}
+\index{warningMessage@{warningMessage}!DangerZone@{DangerZone}}
+\doxysubsubsection{\texorpdfstring{warningMessage}{warningMessage}}
+{\footnotesize\ttfamily \label{class_danger_zone_a4ba517df1141c1753a78d3cf01216918} 
+string Danger\+Zone.\+warning\+Message}
+
+
+
+Warning message to display when the danger zone is penetrated. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_danger_zone_8cs}{Danger\+Zone.\+cs}}\end{DoxyCompactItemize}
